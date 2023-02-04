@@ -1,0 +1,1923 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Buddha Nature</title>
+<style type="text/css">
+    li { list-style: none;  margin: 0; }
+    p { margin: 0; }
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a.mapnode:link {text-decoration: none; color: black; }
+    a.mapnode:visited {text-decoration: none; color: black; }
+    a.mapnode:active {text-decoration: none; color: black; }
+    a.mapnode:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+
+<script type="text/javascript">
+   // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+   // Mozilla 0.9.6.
+
+   if (document.layers) {
+      //Netscape 4 specific code
+      pre = 'document.';
+      post = ''; }
+   if (document.getElementById) {
+      //Netscape 6 specific code
+      pre = 'document.getElementById("';
+      post = '").style'; }
+   if (document.all) {
+      //IE4+ specific code
+      pre = 'document.all.';
+      post = '.style'; }
+
+function layer_exists(layer) {
+   try {
+      eval(pre + layer + post);
+      return true; }
+   catch (error) {
+      return false; }}
+
+function show_layer(layer) {
+   eval(pre + layer + post).position = 'relative'; 
+   eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+   eval(pre + layer + post).visibility = 'hidden';
+   eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder)
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+   var i;
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folding_layer(folder+'_'+i); }
+
+   hide_layer('hide'+folder);
+   hide_layer('show'+folder);
+   hide_layer('fold'+folder);
+
+   scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class="foldspecial" onclick="fold_document()">All +</SPAN>
+<SPAN class="foldspecial" onclick="unfold_document()">All -</SPAN>
+<p>Buddha Nature
+<ul><li>A. Part One: Introduction [not translated]
+
+</li>
+<li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</span>
+B. Part Two: Words and meaning of the actual text expanded in detail
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1" class="foldclosed" onClick="show_folder('1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1" class="foldopened" onClick="hide_folder('1_1_1')">-</span>
+B.I. Title and salutation corresponding to the meaning [not translated]
+<ul id="fold1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1_1" class="foldclosed" onClick="show_folder('1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1_1" class="foldopened" onClick="hide_folder('1_1_1_1')">-</span>
+B.I.1. Title [not translated]
+<ul id="fold1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.I.1.1. Combination of the two languages [not translated]
+
+</li>
+<li>B.I.1.2. Explanation of their meaning [not translated]
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_2" class="foldclosed" onClick="show_folder('1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_1_2" class="foldopened" onClick="hide_folder('1_1_1_2')">-</span>
+B.I.2. Salutation of the translator
+<ul id="fold1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066cc;">I bow down to all buddhas and bodhisattvas.</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2" class="foldclosed" onClick="show_folder('1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2" class="foldopened" onClick="hide_folder('1_1_2')">-</span>
+B.II. The actual commentary, which has supreme meaning
+<ul id="fold1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_1')">-</span>
+B.II.1. Presentation of the body of the text
+<ul id="fold1_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_1_1')">-</span>
+B.II.1.1. Explanation of the body of the commentary as consisting of seven vajra points
+<ul id="fold1_1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.1]
+<br>
+If condensed, the body of the entire commentary
+<br>
+[consists of] the following seven vajra points:
+<br>
+Buddha, Dharma, the Assembly, the element,
+<br>
+enlightenment, qualities, and then buddha activity.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_1_2')">-</span>
+B.II.1.2. Reference to the sutras constituting their source
+<ul id="fold1_1_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.2]
+<br>
+In the above order, which presents them in a logical sequence, these [vajra points]
+<br>
+should be known to be derived from the Sutra Requested by King Dharanishvara.
+<br>
+The [first] three stem from its introductory chapter and the [latter] four from [its chapters]
+<br>
+on the properties of those who possess understanding and the Victorious One.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_1_3" class="foldclosed" onClick="show_folder('1_1_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_1_3" class="foldopened" onClick="hide_folder('1_1_2_1_3')">-</span>
+B.II.1.3. Explanation of their sequence by means of the given order
+<ul id="fold1_1_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.3]
+<br>
+From the Buddha [stems] the Dharma, from the Dharma the Assembly of noble ones,
+<br>
+from the Assembly the attainment of buddha nature, the element of primordial wisdom.
+<br>
+This wisdom finally attained is supreme enlightenment, the powers and so on,
+<br>
+[thus] possessing the properties that fulfill the benefit of all sentient beings.</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2')">-</span>
+B.II.2. Detailed explanation of the parts
+<ul id="fold1_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_1')">-</span>
+B.II.2.1. Detailed explanation of the Three Jewels as being what is to be attained
+<ul id="fold1_1_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_1_1')">-</span>
+B.II.2.1.1. The Buddha who is the teacher
+<ul id="fold1_1_2_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_1_1_1')">-</span>
+B.II.2.1.1.1. Presentation of the nature of the Buddha by means of a praise
+<ul id="fold1_1_2_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.4]
+<br>
+Buddha is without beginning, middle, or end. He is peace itself, fully self-awakened and self-expanded in buddhahood.
+<br>
+Having reached this state, he shows the indestructible, permanent path so that those who have no realization may realize.
+<br>
+Wielding the supreme sword and vajra of knowledge and compassionate love, he cuts the seedling of suffering
+<br>
+and destroys the wall of doubts along with its surrounding thicket of various views. I bow down to this Buddha.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_1_1_2')">-</span>
+B.II.2.1.1.2. Explanation of the meaning of the praise presented in categories
+<ul id="fold1_1_2_2_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.5]
+<br>
+Being uncreated and spontaneously present,
+<br>
+not a realization due to extraneous conditions,
+<br>
+wielding knowledge, compassionate love, and ability,
+<br>
+buddhahood has [the qualities of] the two benefits.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_1_1_3')">-</span>
+B.II.2.1.1.3. Detailed explanation by combining the praise and its meaning
+<ul id="fold1_1_2_2_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.6]
+<br>
+Its nature is without beginning, middle, or end;
+<br>
+hence [the state of a buddha] is uncreated.
+<br>
+Since it possesses the peaceful dharmakaya,
+<br>
+it is described as being &#8220;spontaneously present.&#8221;</span>
+<p><span style="color: #0066cc;">[V.7]
+<br>
+Since it must be realized through self-awareness,
+<br>
+it is not a realization due to extraneous conditions.
+<br>
+These three aspects being realized, there is knowledge.
+<br>
+Since the path is shown, there is compassionate love.
+<br>
+</span>
+<p><span style="color: #0066cc;">[V.8]
+<br>
+There is ability since the mental poisons and suffering
+<br>
+are relinquished by primordial wisdom and compassion.
+<br>
+Through the first three there is benefit for oneself.
+<br>
+Through the latter three there is benefit for others.
+<br>
+</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_1_2')">-</span>
+B.II.2.1.2. The Dharma that is his teaching
+<ul id="fold1_1_2_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_1_2_1')">-</span>
+B.II.2.1.2.1. Presentation of the subject matter by means of a praise
+<ul id="fold1_1_2_2_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.9]
+<br>
+The Dharma is neither non-existent nor existent. It is not both existent and non-existent, nor is it other than existent and non-existent.
+<br>
+It is inaccessible to such investigation and cannot be defined. It is self-aware and peace.
+<br>
+The Dharma is without defilement. Holding the brilliant light rays of primordial wisdom,
+<br>
+it fully defeats attachment, aversion, and dull indifference with regard to all objects of perception. I bow down to this sun of the sacred Dharma.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_1_2_2')">-</span>
+B.II.2.1.2.2. Explanation of the meaning of the praise presented in categories
+<ul id="fold1_1_2_2_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.10]
+<br>
+Inconceivable, free from the two [veils] and from thought,
+<br>
+being pure, clear, and playing the part of an antidote,
+<br>
+it is free from attachment and frees from attachment.
+<br>
+This is the Dharma with its features of the two truths.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_2_3" class="foldclosed" onClick="show_folder('1_1_2_2_1_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_2_3" class="foldopened" onClick="hide_folder('1_1_2_2_1_2_3')">-</span>
+B.II.2.1.2.3. Summary of the categories in terms of the truth of cessation and the truth of the path
+<ul id="fold1_1_2_2_1_2_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.11]
+<br>
+Freedom from attachment [as fruit and means]
+<br>
+consists of the truths of cessation and path.
+<br>
+Accordingly these should also be known
+<br>
+by means of three qualities each.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_2_4" class="foldclosed" onClick="show_folder('1_1_2_2_1_2_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_2_4" class="foldopened" onClick="hide_folder('1_1_2_2_1_2_4')">-</span>
+B.II.2.1.2.4. Explanation of the reasons by combining the praise and its meaning
+<ul id="fold1_1_2_2_1_2_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.12]
+<br>
+Not being an object of conceptual investigation, being inexpressible,
+<br>
+and [only] to be known by noble ones, the Dharma is inconceivable.
+<br>
+Since it is peace, it is free from the two [veils] and free from thought.
+<br>
+In its three [aspects of] purity and so on it is similar to the sun.
+<br>
+</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_1_3')">-</span>
+B.II.2.1.3. The essence of the Sangha whose members hold this teaching
+<ul id="fold1_1_2_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_1')">-</span>
+B.II.2.1.3.1. Presentation of the subject matter by means of a praise
+<ul id="fold1_1_2_2_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.13]
+<br>
+This mind being by nature clear light, they have seen the poisons to be essenceless
+<br>
+and therefore truly realize [the nature of] every being as peace, the ultimate non-existence of a self. They perceive that the Perfect Buddha pervades them all.
+<br>
+They possess the understanding that is free from the veils. Thus seeing that beings are utterly pure and that [this purity pervades] their limitless number,
+<br>
+they are endowed with the vision of primordial wisdom. I bow down to this [Sangha].
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_2')">-</span>
+B.II.2.1.3.2. The Sangha is established as having two or six qualities
+<ul id="fold1_1_2_2_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.14]
+<br>
+The assembly of those who have understanding
+<br>
+and thus do not fall back has unsurpassable qualities,
+<br>
+since their vision of inner primordial wisdom,
+<br>
+which knows correctly and knows completely, is pure.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3_3" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_3" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_3')">-</span>
+B.II.2.1.3.3. Detailed explanation by combining the praise and the presentation of the qualities
+<ul id="fold1_1_2_2_1_3_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_1_3_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_3_1')">-</span>
+B.II.2.1.3.3.1. Explanation of the way they realize correctly
+<ul id="fold1_1_2_2_1_3_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.15]
+<br>
+Realizing beings in their state of peace
+<br>
+[the noble ones] know correctly,
+<br>
+for [the mind] is by nature utterly pure
+<br>
+and the poisons were always exhausted.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_3_2')">-</span>
+B.II.2.1.3.3.2. Explanation of the way they realize completely
+<ul id="fold1_1_2_2_1_3_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.16]
+<br>
+Their understanding, which realizes the knowable
+<br>
+as well as [its] ultimate condition, sees
+<br>
+that the state of omniscience is within all beings.
+<br>
+Thus the [noble ones] know completely.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3_3_3" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_3_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_3_3" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_3_3')">-</span>
+B.II.2.1.3.3.3. Explanation of the particularity of complete purification
+<ul id="fold1_1_2_2_1_3_3_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.17]
+<br>
+Such realization is the vision of wisdom
+<br>
+that is self-aware. This wisdom is pure,
+<br>
+since it [sees] the undefiled expanse,
+<br>
+free from attachment and obstruction.
+<br>
+</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_3_3_4" class="foldclosed" onClick="show_folder('1_1_2_2_1_3_3_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_3_3_4" class="foldopened" onClick="hide_folder('1_1_2_2_1_3_3_4')">-</span>
+B.II.2.1.3.3.4. Explanation of its being a sublime refuge
+<ul id="fold1_1_2_2_1_3_3_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066cc;">[V.18]
+<br>
+Their vision [of] primordial wisdom is pure
+<br>
+and [nears] unsurpassable buddha wisdom.
+<br>
+The noble ones who do not fall back
+<br>
+are therefore a refuge for all beings.
+<br>
+</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_1_4" class="foldclosed" onClick="show_folder('1_1_2_2_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_1_4" class="foldopened" onClick="hide_folder('1_1_2_2_1_4')">-</span>
+B.II.2.1.4. Explanation of the three kinds of refuge
+<ul id="fold1_1_2_2_1_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.1.4.1. The necessity to present three types of refuge
+
+</li>
+<li>B.II.2.1.4.2. Explanation of which is the ultimate refuge and which are not
+
+</li>
+<li>B.II.2.1.4.3. Explanation of the meaning of the name &#8220;rare and sublime&#8221;
+
+</li>
+
+</ul>
+</li>
+
+</ul><p><span id="show1_1_2_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2')">-</span>
+B.II.2.2. Detailed explanation of the last four points describing the way the Three Jewels are attained
+<ul id="fold1_1_2_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_1')">-</span>
+B.II.2.2.1. General explanation of the four points considered together
+<ul id="fold1_1_2_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.1.1. Explanation of the four points as being the object of perception of a buddha
+<p>B.II.2.2.1.2. Explanation that they are inconceivable
+<p>B.II.2.2.1.3. Explanation why they are inconceivable
+<p>B.II.2.2.1.4. Summary of the way realization takes place, by presenting the four points in terms of cause and conditions
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2')">-</span>
+B.II.2.2.2. Specific explanation of the four points considered separately
+<ul id="fold1_1_2_2_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1')">-</span>
+B.II.2.2.2.1. The element is what needs to be realized
+<ul id="fold1_1_2_2_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.1. Short explanation of the meaning of the element
+<p><span id="show1_1_2_2_2_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1')">-</span>
+B.II.2.2.2.1.2. Detailed explanation of the intended meaning
+<ul id="fold1_1_2_2_2_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.1. Short explanation by means of a brief survey
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1')">-</span>
+B.II.2.2.2.1.2.2. Detailed classification of the meaning of the brief survey
+<ul id="fold1_1_2_2_2_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_1')">-</span>
+B.II.2.2.2.1.2.2.1. Essence and cause
+<ul id="fold1_1_2_2_2_2_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.1.1. Joint explanation of what is to be purified and themeans of purification
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_1_1')">-</span>
+B.II.2.2.2.1.2.2.1.2. Separate explanation of the essence of each
+<ul id="fold1_1_2_2_2_2_1_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.1.2.1. The essence being what is to be purified
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_1_1_1')">-</span>
+B.II.2.2.2.1.2.2.1.2.2. The cause being the means of purification
+<ul id="fold1_1_2_2_2_2_1_1_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.1.2.2.1. The way the four veils to be abandoned are given up
+
+</li>
+<li>B.II.2.2.2.1.2.2.1.2.2.2. The way to become an heir of the Victorious One by means of the antidote
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_2')">-</span>
+B.II.2.2.2.1.2.2.2. Fruit and function
+<ul id="fold1_1_2_2_2_2_1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.2.1. Joint explanation of what is to be attained and what causes attainment
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_2_1')">-</span>
+B.II.2.2.2.1.2.2.2.2. Separate explanation of the essence of each
+<ul id="fold1_1_2_2_2_2_1_1_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_1_1_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_2_1_1')">-</span>
+B.II.2.2.2.1.2.2.2.2.1. The fruit being what is to be attained
+<ul id="fold1_1_2_2_2_2_1_1_1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.2.2.1.1. The way to eliminate whatever is incorrect and thus needs to be abandoned
+
+</li>
+<li>B.II.2.2.2.1.2.2.2.2.1.2. The way a fourfold fruit is attained by abandonment
+
+</li>
+<li>B.II.2.2.2.1.2.2.2.2.1.3. The way this attainment liberates one from the two extremes
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_2_1_2')">-</span>
+B.II.2.2.2.1.2.2.2.2.2. The function being what causes attainment
+<ul id="fold1_1_2_2_2_2_1_1_1_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.2.2.2.1. Explanation of the disposition&#8217;s function by means of the contrary
+<p>B.II.2.2.2.1.2.2.2.2.2.2. Explanation of the particular feature being the power of the disposition by means of deduction
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_3')">-</span>
+B.II.2.2.2.1.2.2.3. Endowment
+<ul id="fold1_1_2_2_2_2_1_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.3.1. Joint explanation of the qualities of cause and fruit
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_3_1')">-</span>
+B.II.2.2.2.1.2.2.3.2. Particular explanation of the individual essence of each
+<ul id="fold1_1_2_2_2_2_1_1_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.3.2.1. Endowment in terms of the cause
+
+</li>
+<li>B.II.2.2.2.1.2.2.3.2.2. Endowment in terms of the fruit
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_4')">-</span>
+B.II.2.2.2.1.2.2.4. Manifestation
+<ul id="fold1_1_2_2_2_2_1_1_1_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.4.1. Short explanation of the reason
+
+</li>
+<li>B.II.2.2.2.1.2.2.4.2. Detailed explanation of the reason
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_5" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_5')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_5" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_5')">-</span>
+B.II.2.2.2.1.2.2.5. Phases
+<ul id="fold1_1_2_2_2_2_1_1_1_5" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.5.1. The way a name is attached to three phases
+
+</li>
+<li>B.II.2.2.2.1.2.2.5.2. The way these three names contain six topics
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_6" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_6')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_6" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_6')">-</span>
+B.II.2.2.2.1.2.2.6. All-pervasiveness
+<ul id="fold1_1_2_2_2_2_1_1_1_6" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.6.1. Explanation of the essence
+
+</li>
+<li>B.II.2.2.2.1.2.2.6.2. Explanation of the different types
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_7" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7')">-</span>
+B.II.2.2.2.1.2.2.7. Unchangingness
+<ul id="fold1_1_2_2_2_2_1_1_1_7" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.1. Concise explanation of the essence
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_7_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1')">-</span>
+B.II.2.2.2.1.2.2.7.2. Detailed explanation of unchangingness throughout the three phases
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_1_1_7_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.1. Unchangingness in the unpurified phase
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.7.2.1.1. The way the essence is not polluted by the defilements
+<p>B.II.2.2.2.1.2.2.7.2.1.2. The way there is appearance of arising and disintegration as far as the subject is concerned
+<p>B.II.2.2.2.1.2.2.7.2.1.3. The way the true state is not harmed by destruction
+<p><span id="show1_1_2_2_2_2_1_1_1_7_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_1_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.1.4. Detailed explanation of interdependent origination
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_2_2_2_2_1_1_1_7_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.1.4.1. Explanation of the way generation takes place, by combining an example and its meaning
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.2.1.4.1.1. Example
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.1.4.1.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.1.4.1.3. Joint explanation of the example and its meaning
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.1.4.1.4. The way generation takes place
+
+</li>
+
+</ul><p><span id="show1_1_2_2_2_2_1_1_1_7_1_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_2')">-</span>
+B.II.2.2.2.1.2.2.7.2.1.4.2. Explanation that the essence is undefiled and free from extremes
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.2.1.4.2.1. The way the essence is free from arising and cessation
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.1.4.2.2. The way its purity is not touched by defilements
+
+</li>
+
+</ul><p><span id="show1_1_2_2_2_2_1_1_1_7_1_1_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_1_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_1_1_3')">-</span>
+B.II.2.2.2.1.2.2.7.2.1.4.3. Summary of the example and meaning of arising and disintegration
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.7.2.1.4.3.1. Summary of the way the nature of mind is free from arising and disintegration
+<p>B.II.2.2.2.1.2.2.7.2.1.4.3.2. Summary of the way disintegration takes place
+</li>
+</ul></li>
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_7_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_2')">-</span>
+B.II.2.2.2.1.2.2.7.2.2. Unchangingness in the partly unpurified and partly purified phase
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_2_2_2_2_1_1_1_7_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_2_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.2.1. Explanation of the fact that there is no change through birth and so forth
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.7.2.2.1.1. The way bodhisattvas appear as being subject to change although they are not
+<p><span id="show1_1_2_2_2_2_1_1_1_7_1_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_2_1_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.2.1.2. Detailed explanation of the foregoing section&#8217;s meaning
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.2.2.1.2.1. The way bodhisattvas are not subject to the change caused by suffering
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.2.1.2.2. The way they appear as being subject to change out of their compassion
+
+</li>
+
+</ul></li>
+</ul><p><span id="show1_1_2_2_2_2_1_1_1_7_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_2_2')">-</span>
+B.II.2.2.2.1.2.2.7.2.2.2. Identification of the qualities of the heirs of the Victorious One who dwell on the ten bodhisattva levels
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.7.2.2.2.1. The qualities of a bodhisattva who has first given rise to bodhichitta
+<p>B.II.2.2.2.1.2.2.7.2.2.2.2. The qualities of a bodhisattva who has gained access to supreme conduct
+<p>B.II.2.2.2.1.2.2.7.2.2.2.3. The qualities of a bodhisattva who has attained the level of non-returning
+<p>B.II.2.2.2.1.2.2.7.2.2.2.4. The qualities of a bodhisattva who has reached the last birth
+<p>B.II.2.2.2.1.2.2.7.2.2.2.5. Explanation of the difference as far as the accomplishment of the two benefits is concerned
+</li>
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_7_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_3')">-</span>
+B.II.2.2.2.1.2.2.7.2.3. Unchangingness in the utterly purified phase
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.2.3.1. Concise explanation of the reason for its unchangingness
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_7_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_3_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.3.2. Detailed explanation of its meaning
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_2_2_2_2_1_1_1_7_1_3_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_7_1_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_7_1_3_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_7_1_3_1_1')">-</span>
+B.II.2.2.2.1.2.2.7.2.3.2.1. Presentation of freedom from birth and so forth in terms of statement and proof
+<ul id="fold1_1_2_2_2_2_1_1_1_7_1_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.7.2.3.2.1.1. Concise explanation of each individually
+
+</li>
+<li>B.II.2.2.2.1.2.2.7.2.3.2.1.2. Detailed explanation combining them
+
+</li>
+
+</ul><p>B.II.2.2.2.1.2.2.7.2.3.2.2. Summary of its meaning
+<p>B.II.2.2.2.1.2.2.7.2.3.2.3. Explanation of the reason for its establishment as being permanent and so forth
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_8" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8')">-</span>
+B.II.2.2.2.1.2.2.8. Inseparability of the qualities
+<ul id="fold1_1_2_2_2_2_1_1_1_8" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.8.1. Short explanation by means of names
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_8_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1')">-</span>
+B.II.2.2.2.1.2.2.8.2. Detailed explanation of their essence
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_1_1_8_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1_1')">-</span>
+B.II.2.2.2.1.2.2.8.2.1. Detailed explanation of the synonymous names
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.8.2.1.1. The fact that the names have been given due to the meaning [of the dharmadhatu]
+<p>B.II.2.2.2.1.2.2.8.2.1.2. Combination of the names and the meaning
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_8_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1_2')">-</span>
+B.II.2.2.2.1.2.2.8.2.2. Detailed explanation of their essential meaning
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.2.2.8.2.2.1. Detailed explanation of the fact [that a buddha and nirvana] are no different
+<p>B.II.2.2.2.1.2.2.8.2.2.2. Detailed explanation of the meaning of liberation
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_8_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1_3')">-</span>
+B.II.2.2.2.1.2.2.8.2.3. Detailed explanation of these by means of examples
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_1_1_8_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1_3_1')">-</span>
+B.II.2.2.2.1.2.2.8.2.3.1. The fictitious example of the painters
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.8.2.3.1.1. Example
+
+</li>
+<li>B.II.2.2.2.1.2.2.8.2.3.1.2. Meaning
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_1_1_8_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_1_1_8_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_1_1_8_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_1_1_8_1_3_2')">-</span>
+B.II.2.2.2.1.2.2.8.2.3.2. Explanation by means of the non-fictitious example of the sun
+<ul id="fold1_1_2_2_2_2_1_1_1_8_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.2.2.8.2.3.2.1. Presentation of the corresponding qualities
+
+</li>
+<li>B.II.2.2.2.1.2.2.8.2.3.2.2. Explanation of buddhahood as being nirvana
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&nbsp;
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.1.2.3. Summary of the meaning of the explanation
+
+</li>
+
+</ul><p><span id="show1_1_2_2_2_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2')">-</span>
+B.II.2.2.2.1.3. Explanation of the way the defilements are to be purified though the essence is unchanging, by means of examples
+<ul id="fold1_1_2_2_2_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.3.1. Concise summary
+<p><span id="show1_1_2_2_2_2_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1')">-</span>
+B.II.2.2.2.1.3.2. Explanation of the nature of the Victorious One and the defilements by means of nine examples
+<ul id="fold1_1_2_2_2_2_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_1')">-</span>
+B.II.2.2.2.1.3.2.1. Concise explanation
+<ul id="fold1_1_2_2_2_2_1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.3.2.1.1. What is obscured and what causes obscuration alternately expressed through an example followed by its meaning
+<p>B.II.2.2.2.1.3.2.1.2. Both example and meaning expressed separately
+</li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2')">-</span>
+B.II.2.2.2.1.3.2.2. Detailed explanation
+<ul id="fold1_1_2_2_2_2_1_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_2_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_1')">-</span>
+B.II.2.2.2.1.3.2.2.1. Example and meaning of the buddha and the lotus
+<ul id="fold1_1_2_2_2_2_1_2_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.1.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.1.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.1.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_2')">-</span>
+B.II.2.2.2.1.3.2.2.2. Example and meaning of the honey and the bees
+<ul id="fold1_1_2_2_2_2_1_2_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.2.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.2.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.2.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_3')">-</span>
+B.II.2.2.2.1.3.2.2.3. Example and meaning of the grain and the husk
+<ul id="fold1_1_2_2_2_2_1_2_1_2_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.3.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.3.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.3.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_4')">-</span>
+B.II.2.2.2.1.3.2.2.4. Example and meaning of the gold and the filth
+<ul id="fold1_1_2_2_2_2_1_2_1_2_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.4.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.4.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.4.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_5" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_5')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_5" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_5')">-</span>
+B.II.2.2.2.1.3.2.2.5. Example and meaning of the treasure and the earth
+<ul id="fold1_1_2_2_2_2_1_2_1_2_5" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.5.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.5.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.5.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_6" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_6')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_6" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_6')">-</span>
+B.II.2.2.2.1.3.2.2.6. Example and meaning of the shoot and the fruitskin
+<ul id="fold1_1_2_2_2_2_1_2_1_2_6" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.6.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.6.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.6.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_7" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_7')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_7" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_7')">-</span>
+B.II.2.2.2.1.3.2.2.7. Example and meaning of the statue and the tattered rag
+<ul id="fold1_1_2_2_2_2_1_2_1_2_7" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.7.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.7.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.7.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_8" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_8')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_8" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_8')">-</span>
+B.II.2.2.2.1.3.2.2.8. Example and meaning of the universal monarch and the woman
+<ul id="fold1_1_2_2_2_2_1_2_1_2_8" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.8.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.8.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.8.3. Both combined
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_1_2_9" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_1_2_9')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_1_2_9" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_1_2_9')">-</span>
+B.II.2.2.2.1.3.2.2.9. Example and meaning of the golden image and the clay
+<ul id="fold1_1_2_2_2_2_1_2_1_2_9" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.2.2.9.1. Example
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.9.2. Meaning
+
+</li>
+<li>B.II.2.2.2.1.3.2.2.9.3. Both combined
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.1.3.2.3. Summary of the meaning
+
+</li>
+
+</ul><p><span id="show1_1_2_2_2_2_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_2')">-</span>
+B.II.2.2.2.1.3.3. The way the defilements are purified
+<ul id="fold1_1_2_2_2_2_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.3.3.1. Explanation of the nine defilements
+<p>B.II.2.2.2.1.3.3.2. Explanation of the question: In which individual&#8217;s stream of being they are present?
+<p><span id="show1_1_2_2_2_2_1_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_2_1')">-</span>
+B.II.2.2.2.1.3.3.3. Detailed explanation of the way the defilements are purified
+<ul id="fold1_1_2_2_2_2_1_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.1.3.3.3.1. The three dormant tendencies
+<p>B.II.2.2.2.1.3.3.3.2. The defect of their fiercely active state
+<p>B.II.2.2.2.1.3.3.3.3. The fault of the ground of the remaining imprints of ignorance
+<p>B.II.2.2.2.1.3.3.3.4. The defilements to be abandoned on the paths of seeing and meditation of the common vehicle
+<p>B.II.2.2.2.1.3.3.3.5. The defilements of the seven impure levels in particular
+<p>B.II.2.2.2.1.3.3.3.6. The defilements to be overcome by vajra-like samadhi
+<p>B.II.2.2.2.1.3.3.3.7. Summary of the meaning
+</li>
+</ul></li>
+</ul><p><span id="show1_1_2_2_2_2_1_2_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_3')">-</span>
+B.II.2.2.2.1.3.4. The gradual stages of realization
+<ul id="fold1_1_2_2_2_2_1_2_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.4.1. Short explanation of what is illustrated by the nine examples
+
+</li>
+<li>B.II.2.2.2.1.3.4.2. Individual classification of their meaning
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_3_1')">-</span>
+B.II.2.2.2.1.3.4.3. Detailed explanation of the essence of the different kinds
+<ul id="fold1_1_2_2_2_2_1_2_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_2_3_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_3_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_3_1_1')">-</span>
+B.II.2.2.2.1.3.4.3.1. Example and meaning of the dharmakaya
+<ul id="fold1_1_2_2_2_2_1_2_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.4.3.1.1. Explanation of the different aspects of the dharmakaya
+
+</li>
+<li>B.II.2.2.2.1.3.4.3.1.2. Combination of these with their examples
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.1.3.4.3.2. Example and meaning of suchness
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_2_3_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_3_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_3_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_3_1_2')">-</span>
+B.II.2.2.2.1.3.4.3.3. Example and meaning of the disposition
+<ul id="fold1_1_2_2_2_2_1_2_3_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.4.3.3.1. Presentation of the two types of disposition by means of their examples
+
+</li>
+<li>B.II.2.2.2.1.3.4.3.3.2. Explanation of the way the three kayas are attained from these
+
+</li>
+<li>B.II.2.2.2.1.3.4.3.3.3. Combination of these with their examples
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.1.3.4.3.4. The way these are to be realized through faith
+
+</li>
+
+</ul>
+</li>
+
+</ul><p><span id="show1_1_2_2_2_2_1_2_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_2_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_2_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_2_4')">-</span>
+B.II.2.2.2.1.3.5. Explanation of the very nature itself
+<ul id="fold1_1_2_2_2_2_1_2_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.3.5.1. Essence
+
+</li>
+<li>B.II.2.2.2.1.3.5.2. The way it is empty and not empty
+
+</li>
+
+</ul></li>
+</ul><p><span id="show1_1_2_2_2_2_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_3')">-</span>
+B.II.2.2.2.1.4. The necessity to explain the element
+<ul id="fold1_1_2_2_2_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_3_1')">-</span>
+B.II.2.2.2.1.4.1. Short explanation of question and answer
+<ul id="fold1_1_2_2_2_2_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.4.1.1. Question
+
+</li>
+<li>B.II.2.2.2.1.4.1.2. Answer
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_3_2')">-</span>
+B.II.2.2.2.1.4.2. Detailed explanation of their meaning
+<ul id="fold1_1_2_2_2_2_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_1_3_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_3_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_3_2_1')">-</span>
+B.II.2.2.2.1.4.2.1. The intention of the teaching of the second turning of the wheel of Dharma
+<ul id="fold1_1_2_2_2_2_1_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.4.2.1.1. Short explanation
+
+</li>
+<li>B.II.2.2.2.1.4.2.1.2. Detailed explanation
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.1.4.2.2. The reason for the teaching of the third turning of the wheel of Dharma
+
+</li>
+<li><span id="show1_1_2_2_2_2_1_3_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_1_3_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_1_3_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_1_3_2_2')">-</span>
+B.II.2.2.2.1.4.2.3. Detailed explanation of this reason
+<ul id="fold1_1_2_2_2_2_1_3_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.1.4.2.3.1. The way the five evils come about
+
+</li>
+<li>B.II.2.2.2.1.4.2.3.2. The way qualities are attained once the five evils are abandoned.
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2')">-</span>
+B.II.2.2.2.2. Enlightenment is the realization
+<ul id="fold1_1_2_2_2_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.1. Short explanation of the essence of the subject to be explained
+
+</li>
+<li>B.II.2.2.2.2.2. Concise summary of the way of explanation
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1')">-</span>
+B.II.2.2.2.2.3. Detailed explanation by combining these
+<ul id="fold1_1_2_2_2_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_1')">-</span>
+B.II.2.2.2.2.3.1. Detailed explanation of essence and cause
+<ul id="fold1_1_2_2_2_2_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.1.1. Concise explanation of the way purity is attained
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_1_1')">-</span>
+B.II.2.2.2.2.3.1.2. Detailed explanation of its meaning
+<ul id="fold1_1_2_2_2_2_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.1.2.1. Essence
+
+</li>
+<li>B.II.2.2.2.2.3.1.2.2. The way it possesses qualities
+
+</li>
+<li>B.II.2.2.2.2.3.1.2.3. The meaning of the stains
+
+</li>
+<li>B.II.2.2.2.2.3.1.2.4. The cause by which one becomes free from these [veils]
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_2')">-</span>
+B.II.2.2.2.2.3.2. Detailed explanation of the fruit
+<ul id="fold1_1_2_2_2_2_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_2_1')">-</span>
+B.II.2.2.2.2.3.2.1. Concise explanation of freedom from stains by means of examples
+<ul id="fold1_1_2_2_2_2_2_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.2.1.1. The fruit of liberation from the veil of the mental poisons
+
+</li>
+<li>B.II.2.2.2.2.3.2.1.2. The fruit of liberation from the veil of the hindrances to knowledge
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_2_2')">-</span>
+B.II.2.2.2.2.3.2.2. Detailed explanation of the reason for this
+<ul id="fold1_1_2_2_2_2_2_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.2.2.1. The fruit attained through meditative equipoise and the post-meditative phase
+
+</li>
+<li>B.II.2.2.2.2.3.2.2.2. The fruit of purification from the three poisons
+
+</li>
+<li>B.II.2.2.2.2.3.2.2.3. Combination of the meaning with the nine examples
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_3')">-</span>
+B.II.2.2.2.2.3.3. Detailed explanation of its function
+<ul id="fold1_1_2_2_2_2_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_3_1')">-</span>
+B.II.2.2.2.2.3.3.1. Concise explanation of the way the two benefits are accomplished
+<ul id="fold1_1_2_2_2_2_2_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.3.1.1. The function of the essence
+
+</li>
+<li>B.II.2.2.2.2.3.3.1.2. The function in terms of there being purity throughout all phenomena
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_3_2')">-</span>
+B.II.2.2.2.2.3.3.2. Detailed explanation of the meaning
+<ul id="fold1_1_2_2_2_2_2_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.2.3.3.2.1. Explanation of the way the two benefits are accomplished, combined with their respective classification
+<p>B.II.2.2.2.2.3.3.2.2. Particular explanation of the best possible benefit for oneself
+<p>B.II.2.2.2.2.3.3.2.3. Particular explanation of the best possible benefit for others
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_4')">-</span>
+B.II.2.2.2.2.3.4. Detailed explanation of endowment
+<ul id="fold1_1_2_2_2_2_2_1_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.4.1. Concise explanation through listing the names [of the qualities]
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_4_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_4_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_4_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_4_1')">-</span>
+B.II.2.2.2.2.3.4.2. Detailed explanation of the meaning [of the qualities]
+<ul id="fold1_1_2_2_2_2_2_1_4_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.4.2.1. Concise explanation of who is endowed with qualities
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_4_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_4_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_4_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_4_1_1')">-</span>
+B.II.2.2.2.2.3.4.2.2. Definition of the qualities that constitute endowment
+<ul id="fold1_1_2_2_2_2_2_1_4_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_4_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_4_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_4_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_4_1_1_1')">-</span>
+B.II.2.2.2.2.3.4.2.2.1. Detailed explanation of the reason why they are deep
+<ul id="fold1_1_2_2_2_2_2_1_4_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.4.2.2.1.1. General explanation of the way they are inconceivable
+
+</li>
+<li>B.II.2.2.2.2.3.4.2.2.1.2. Detailed explanation of the specifics
+
+</li>
+<li>B.II.2.2.2.2.3.4.2.2.1.3. Combination of the reasons with an example
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_4_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_4_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_4_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_4_1_1_2')">-</span>
+B.II.2.2.2.2.3.4.2.2.2. Explanation of the reason for the next [fourteen qualities]
+<ul id="fold1_1_2_2_2_2_2_1_4_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.4.2.2.2.1. The qualities of being unchanging
+
+</li>
+<li>B.II.2.2.2.2.3.4.2.2.2.2. The qualities of abandonment and realization
+
+</li>
+<li>B.II.2.2.2.2.3.4.2.2.2.3. The qualities of purity and purification
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5')">-</span>
+B.II.2.2.2.2.3.5. Detailed explanation of its manifestation
+<ul id="fold1_1_2_2_2_2_2_1_5" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_5_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_1')">-</span>
+B.II.2.2.2.2.3.5.1. Concise explanation through listing the characteristics
+<ul id="fold1_1_2_2_2_2_2_1_5_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.1.1. Explanation of who realizes the essence
+
+</li>
+<li>B.II.2.2.2.2.3.5.1.2. Concise explanation of the particularity of the dharmakaya
+
+</li>
+<li>B.II.2.2.2.2.3.5.1.3. Concise explanation of the particularity of the sambhogakaya
+
+</li>
+<li>B.II.2.2.2.2.3.5.1.4. Concise explanation of the particularity of the nirmanakaya
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2')">-</span>
+B.II.2.2.2.2.3.5.2. Detailed explanation of their meaning
+<ul id="fold1_1_2_2_2_2_2_1_5_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.2.1. Common classification
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1')">-</span>
+B.II.2.2.2.2.3.5.2.2. Presentation of each individually
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_2_1_5_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1_1')">-</span>
+B.II.2.2.2.2.3.5.2.2.1. Presentation of the dharmakaya or svabhavikakaya
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.2.2.1.1. Concise explanation of the qualities and characteristics
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1_1_1')">-</span>
+B.II.2.2.2.2.3.5.2.2.1.2. Detailed explanation of their essence
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.2.2.1.2.1. Explanation of the five characteristics
+
+</li>
+<li>B.II.2.2.2.2.3.5.2.2.1.2.2. Explanation of the five qualities
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1_2')">-</span>
+B.II.2.2.2.2.3.5.2.2.2. Presentation of the sambhogakaya
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.2.2.2.1. Detailed explanation of the presentation
+
+</li>
+<li>B.II.2.2.2.2.3.5.2.2.2.2. The five properties taught in summarized form
+
+</li>
+<li>B.II.2.2.2.2.3.5.2.2.2.3. The way it appears due to conditions
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1_3')">-</span>
+B.II.2.2.2.2.3.5.2.2.3. Presentation of the nirmanakaya
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.2.3.5.2.2.3.1. The way the twelve deeds of the supreme nirmanakaya are demonstrated
+<p><span id="show1_1_2_2_2_2_2_1_5_2_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_1_3_1')">-</span>
+B.II.2.2.2.2.3.5.2.2.3.2. The way the disciples are gradually guided, this being the function of the [twelve deeds]
+<ul id="fold1_1_2_2_2_2_2_1_5_2_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.2.2.2.2.3.5.2.2.3.2.1. The way the ordinary beings are guided to enter the lesser vehicles
+<p>B.II.2.2.2.2.3.5.2.2.3.2.2. The way those following the lesser vehicles are ripened by means of the Mahayana
+<p>B.II.2.2.2.2.3.5.2.2.3.2.3. The way those following the Great Vehicle are joined with complete liberation
+</li>
+</ul></li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_5_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_5_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_5_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_5_2_2')">-</span>
+B.II.2.2.2.2.3.5.2.3. Summary of their meaning
+<ul id="fold1_1_2_2_2_2_2_1_5_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.5.2.3.1. Summary into three [kayas] with reference to reasons
+
+</li>
+<li>B.II.2.2.2.2.3.5.2.3.2. Summary into two [kayas] with reference to the way they are
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_6" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_6')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_6" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_6')">-</span>
+B.II.2.2.2.2.3.6. Detailed explanation of its permanence
+<ul id="fold1_1_2_2_2_2_2_1_6" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.6.1. Concise explanation of the reason
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_6_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_6_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_6_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_6_1')">-</span>
+B.II.2.2.2.2.3.6.2. Detailed explanation of its meaning
+<ul id="fold1_1_2_2_2_2_2_1_6_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.6.2.1. The seven reasons why the visible kayas are permanent
+
+</li>
+<li>B.II.2.2.2.2.3.6.2.2. Explanation of the three reasons why the dharmakaya is permanent
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.2.3.6.3. Summary of its general meaning
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_7" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_7')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_7" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_7')">-</span>
+B.II.2.2.2.2.3.7. Detailed explanation of inconceivability
+<ul id="fold1_1_2_2_2_2_2_1_7" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.7.1. Concise illustration of the way it is inconceivable
+
+</li>
+<li><span id="show1_1_2_2_2_2_2_1_7_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_2_1_7_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_2_1_7_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_2_1_7_1')">-</span>
+B.II.2.2.2.2.3.7.2. Detailed explanation of the reason for this
+<ul id="fold1_1_2_2_2_2_2_1_7_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.2.3.7.2.1. Gradual explanation through eight logical reasonings
+
+</li>
+<li>B.II.2.2.2.2.3.7.2.2. Summary into six causes
+
+</li>
+<li>B.II.2.2.2.2.3.7.2.3. Explanation of the way it is difficult to realize
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3')">-</span>
+B.II.2.2.2.3. The qualities are the attributes [of realization]
+<ul id="fold1_1_2_2_2_2_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_1')">-</span>
+B.II.2.2.2.3.1. Concise explanation of their number combining them with the two kayas
+<ul id="fold1_1_2_2_2_2_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.1.1. Explanation classifying them in terms of kaya and primordial wisdom
+
+</li>
+<li>B.II.2.2.2.3.1.2. The qualities combined with these individually
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2')">-</span>
+B.II.2.2.2.3.2. Detailed explanation of the different classes of qualities
+<ul id="fold1_1_2_2_2_2_3_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.1. Concise explanation combining the meaning with an example
+
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1')">-</span>
+B.II.2.2.2.3.2.2. Detailed explanation presenting each individually
+<ul id="fold1_1_2_2_2_2_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_3_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1_1')">-</span>
+B.II.2.2.2.3.2.2.1. Illustration of the fruit of freedom
+<ul id="fold1_1_2_2_2_2_3_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_3_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1_1_1')">-</span>
+B.II.2.2.2.3.2.2.1.1. The ten powers
+<ul id="fold1_1_2_2_2_2_3_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.2.1.1.1. Depiction of the essence of the point to be demonstrated
+
+</li>
+<li>B.II.2.2.2.3.2.2.1.1.2. Clarification through examples as the means of demonstration
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1_1_2')">-</span>
+B.II.2.2.2.3.2.2.1.2. The four fearlessnesses
+<ul id="fold1_1_2_2_2_2_3_2_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.2.1.2.1. Concise explanation of the essence
+
+</li>
+<li>B.II.2.2.2.3.2.2.1.2.2. Detailed explanation of the function
+
+</li>
+<li>B.II.2.2.2.3.2.2.1.2.3. Clarification by means of examples.
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_1_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1_1_3')">-</span>
+B.II.2.2.2.3.2.2.1.3. The eighteen unmixed features
+<ul id="fold1_1_2_2_2_2_3_2_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.2.1.3.1. Concise explanation of the essence
+
+</li>
+<li>B.II.2.2.2.3.2.2.1.3.2. Detailed explanation of the function
+
+</li>
+<li>B.II.2.2.2.3.2.2.1.3.3. Clarification by means of examples
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_1_2')">-</span>
+B.II.2.2.2.3.2.2.2. Explanation of the fruit of maturation
+<ul id="fold1_1_2_2_2_2_3_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.2.2.1. The different kinds of signs intended to be illustrated
+
+</li>
+<li>B.II.2.2.2.3.2.2.2.2. Summary through examples, being the means of illustration
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.3.2.3. The way these are to be realized from the words of the Teacher
+
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2')">-</span>
+B.II.2.2.2.3.2.4. Explanation by once more summarizing meaning and example
+<ul id="fold1_1_2_2_2_2_3_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.4.1. General teaching of the reason for the similarity of meaning and example
+
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2_1')">-</span>
+B.II.2.2.2.3.2.4.2. Explanation of each individually by combining [meaning and example]
+<ul id="fold1_1_2_2_2_2_3_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_3_2_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2_1_1')">-</span>
+B.II.2.2.2.3.2.4.2.1. Explanation of the fruit of freedom
+<ul id="fold1_1_2_2_2_2_3_2_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_3_2_2_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2_1_1_1')">-</span>
+B.II.2.2.2.3.2.4.2.1.1. Illustration of the powers by means of examples
+<ul id="fold1_1_2_2_2_2_3_2_2_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.4.2.1.1.1. Illustration of the individual kinds
+
+</li>
+<li>B.II.2.2.2.3.2.4.2.1.1.2. Illustration of their common feature
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_2_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2_1_1_2')">-</span>
+B.II.2.2.2.3.2.4.2.1.2. Illustration of the fearlessnesses by means of examples
+<ul id="fold1_1_2_2_2_2_3_2_2_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.4.2.1.2.1. Concise teaching
+
+</li>
+<li>B.II.2.2.2.3.2.4.2.1.2.2. Detailed explanation
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.3.2.4.2.1.3. Illustration of the unmixed features by means of examples
+
+</li>
+<li>B.II.2.2.2.3.2.4.2.1.4. Summary of the way they are indivisible
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_3_2_2_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_3_2_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_3_2_2_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_3_2_2_1_2')">-</span>
+B.II.2.2.2.3.2.4.2.2. Explanation of the fruit of maturation
+<ul id="fold1_1_2_2_2_2_3_2_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.3.2.4.2.2.1. The way the marks are based upon the two kayas
+
+</li>
+<li>B.II.2.2.2.3.2.4.2.2.2. The way the two kayas are illustrated by the example of the moon
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4')">-</span>
+B.II.2.2.2.4. Activity is the action [of realization]
+<ul id="fold1_1_2_2_2_2_4" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_1')">-</span>
+B.II.2.2.2.4.1. Concise teaching
+<ul id="fold1_1_2_2_2_2_4_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.1.1. Concise teaching [of activity] being spontaneous
+
+</li>
+<li>B.II.2.2.2.4.1.2. Concise teaching [of activity] being uninterrupted
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_2')">-</span>
+B.II.2.2.2.4.2. Detailed explanation
+<ul id="fold1_1_2_2_2_2_4_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_2_1')">-</span>
+B.II.2.2.2.4.2.1. Teaching of the summarized meaning of spontaneity
+<ul id="fold1_1_2_2_2_2_4_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.2.1.1. Manifesting free from ideation
+
+</li>
+<li>B.II.2.2.2.4.2.1.2. Manifesting unmistakenly as to place and time
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_2_2')">-</span>
+B.II.2.2.2.4.2.2. Explanation of the classified meaning of uninterruptedness
+<ul id="fold1_1_2_2_2_2_4_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.2.2.1. Concise teaching enumerating names
+
+</li>
+<li>B.II.2.2.2.4.2.2.2. Detailed explanation of the different kinds of meaning
+
+</li>
+<li>B.II.2.2.2.4.2.2.3. Illustration of these by means of examples
+
+</li>
+<li>B.II.2.2.2.4.2.2.4. Detailed explanation combining example and meaning
+
+</li>
+<li>B.II.2.2.2.4.2.2.5. Summary of the way it is uninterrupted
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3')">-</span>
+B.II.2.2.2.4.3. Very detailed explanation in combination with examples
+<ul id="fold1_1_2_2_2_2_4_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.1. Concise teaching of the different kinds of examples
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1')">-</span>
+B.II.2.2.2.4.3.2. Detailed explanation of the examples and their meaning
+<ul id="fold1_1_2_2_2_2_4_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_3_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1')">-</span>
+B.II.2.2.2.4.3.2.1. Combining each example and meaning in terms of its individual essence
+<ul id="fold1_1_2_2_2_2_4_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_3_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_1')">-</span>
+B.II.2.2.2.4.3.2.1.1. The body demonstrating illusory appearance
+<ul id="fold1_1_2_2_2_2_4_3_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_3_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_1_1')">-</span>
+B.II.2.2.2.4.3.2.1.1.1. Presentation of the example
+<ul id="fold1_1_2_2_2_2_4_3_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.1.1.1. The way it appears
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.1.2. The function
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.1.3. The way it becomes meaningful
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_1_2')">-</span>
+B.II.2.2.2.4.3.2.1.1.2. Explanation of the meaning
+<ul id="fold1_1_2_2_2_2_4_3_1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.1.2.1. The way of appearance
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.2.2. Striving [to achieve it]
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.2.3. Free from ideation and yet bringing about benefit
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.3. Detailed explanation of the example
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.4. Precise depiction of the meaning
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.1.5. Summary of the way in which there is freedom from arising and cessation
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_2')">-</span>
+B.II.2.2.2.4.3.2.1.2. The speech expressing the oral instructions
+<ul id="fold1_1_2_2_2_2_4_3_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.2.1. Presentation of the example
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.2.2. Teaching the meaning
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_2_1')">-</span>
+B.II.2.2.2.4.3.2.1.2.3. The function of the meaning and the example
+<ul id="fold1_1_2_2_2_2_4_3_1_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.2.3.1. Detailed explanation
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.2.3.2. Summary of the meaning
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.4.3.2.1.2.4. Expressing its specialty
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.2.5. Explanation in combination with the three miraculous displays
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.2.6. Where the power of speech does not enter and where it is unhindered
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_3')">-</span>
+B.II.2.2.2.4.3.2.1.3. The way the mind is pervasive through knowledge and compassionate love
+<ul id="fold1_1_2_2_2_2_4_3_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.3.1. Short presentation of the example of clouds
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_3_1')">-</span>
+B.II.2.2.2.4.3.2.1.3.2. Detailed explanation of the example
+<ul id="fold1_1_2_2_2_2_4_3_1_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.3.2.1. Presentation of the meaning and the example
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.3.2.2. Explanation of the meaning through corresponding properties
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.4.3.2.1.3.3. The way there is change in terms of the vessel
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_3_2')">-</span>
+B.II.2.2.2.4.3.2.1.3.4. Effortless manifestation
+<ul id="fold1_1_2_2_2_2_4_3_1_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.3.4.1. Concise presentation
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_3_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_3_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_3_2_1')">-</span>
+B.II.2.2.2.4.3.2.1.3.4.2. Detailed explanation
+<ul id="fold1_1_2_2_2_2_4_3_1_1_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.3.4.2.1. Combination of example and meaning in terms of corresponding properties
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.3.4.2.2. The way it is not discriminatory
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_3_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_3_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_3_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_3_3')">-</span>
+B.II.2.2.2.4.3.2.1.3.5. Connection with the property conducive to eliminating suffering
+<ul id="fold1_1_2_2_2_2_4_3_1_1_3_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.3.5.1. Depiction of suffering and its elimination
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.3.5.2. Realizing in terms of change
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.3.5.3. Seeing the way of the four truths
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_4" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_4" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_4')">-</span>
+B.II.2.2.2.4.3.2.1.4. Emitting illusory manifestations
+<ul id="fold1_1_2_2_2_2_4_3_1_1_4" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.4.1. Short presentation of the example and its meaning
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.4.2. Detailed explanation
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.4.3. Presentation of the cause of seeing
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.4.4. Explanation of the twelve deeds of the nirmanakaya
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_5" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_5')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_5" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_5')">-</span>
+B.II.2.2.2.4.3.2.1.5. The way primordial wisdom manifests
+<ul id="fold1_1_2_2_2_2_4_3_1_1_5" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.5.1. Presentation of the manifestation and non-manifestation of primordial wisdom
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.5.2. Explanation of its manifestation&#8217;s activity
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.5.3. They way primordial wisdom radiates
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.5.4. The way there is manifold manifestation
+
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_5_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_5_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_5_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_5_1')">-</span>
+B.II.2.2.2.4.3.2.1.5.5. The gradual manifestation of primordial wisdom
+<ul id="fold1_1_2_2_2_2_4_3_1_1_5_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.5.5.1. Concise presentation
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.5.5.2. Detailed explanation
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_5_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_5_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_5_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_5_2')">-</span>
+B.II.2.2.2.4.3.2.1.5.6. The special excellence of its function
+<ul id="fold1_1_2_2_2_2_4_3_1_1_5_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.5.6.1. Presentation in terms of being beyond the example
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.5.6.2. Depiction of its specific function
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_1_6" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_1_6')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_1_6" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_1_6')">-</span>
+B.II.2.2.2.4.3.2.1.6. The secret aspect of mind
+<ul id="fold1_1_2_2_2_2_4_3_1_1_6" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.1.6.1. The way manifold wishes are accomplished without ideation
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.6.2. The way there is continuous manifestation without deliberate effort
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.6.3. Presentation of similarity in terms of being difficult to find
+
+</li>
+
+</ul>
+</li>
+<li>B.II.2.2.2.4.3.2.1.7. The secret aspect of speech
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.8. The secret aspect of body
+
+</li>
+<li>B.II.2.2.2.4.3.2.1.9. The way compassion manifests
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_2')">-</span>
+B.II.2.2.2.4.3.2.2. Summary of the meaning of this chapter by expressing its purpose
+<ul id="fold1_1_2_2_2_2_4_3_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_3_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_2_1')">-</span>
+B.II.2.2.2.4.3.2.2.1. The different kinds of the examples&#8217; purpose and meaning
+<ul id="fold1_1_2_2_2_2_4_3_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.2.1.1. The way the immediate purpose and the intrinsic purpose is achieved
+
+</li>
+<li>B.II.2.2.2.4.3.2.2.1.2. Presentation of a summary of the example and the meaning
+
+</li>
+<li>B.II.2.2.2.4.3.2.2.1.3. Applying the examples in three ways
+
+</li>
+<li>B.II.2.2.2.4.3.2.2.1.4. The meaning of the chapter is freedom from deliberate effort
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_2_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_2_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_2_2')">-</span>
+B.II.2.2.2.4.3.2.2.2. Specifically explaining the way it has been shown by examples
+<ul id="fold1_1_2_2_2_2_4_3_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.2.2.1. The different kinds of examples
+
+</li>
+<li>B.II.2.2.2.4.3.2.2.2.2. Explanation in combination with their meaning
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_3" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_3" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_3')">-</span>
+B.II.2.2.2.4.3.2.3. Specific explanation through a very condensed summary
+<ul id="fold1_1_2_2_2_2_4_3_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_2_2_2_4_3_1_3_1" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_3_1" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_3_1')">-</span>
+B.II.2.2.2.4.3.2.3.1. The way there is appearance and yet freedom from birth and death
+<ul id="fold1_1_2_2_2_2_4_3_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.3.1.1. The example of [dependence on] faculties
+
+</li>
+<li>B.II.2.2.2.4.3.2.3.1.2. The way it is free from birth and death, since it is uninterrupted
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_2_2_2_4_3_1_3_2" class="foldclosed" onClick="show_folder('1_1_2_2_2_2_4_3_1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_2_2_2_4_3_1_3_2" class="foldopened" onClick="hide_folder('1_1_2_2_2_2_4_3_1_3_2')">-</span>
+B.II.2.2.2.4.3.2.3.2. The way there is special excellence superior to the corresponding property
+<ul id="fold1_1_2_2_2_2_4_3_1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.2.2.2.4.3.2.3.2.1. Concise presentation
+
+</li>
+<li>B.II.2.2.2.4.3.2.3.2.2. Detailed explanation
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_1_2_3" class="foldclosed" onClick="show_folder('1_1_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3" class="foldopened" onClick="hide_folder('1_1_2_3')">-</span>
+B.II.3. Conclusion of the explanation
+<ul id="fold1_1_2_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_2_3_1" class="foldclosed" onClick="show_folder('1_1_2_3_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_1" class="foldopened" onClick="hide_folder('1_1_2_3_1')">-</span>
+B.II.3.1. Benefit
+<ul id="fold1_1_2_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p>B.II.3.1.1. Presentation of the meaning being inconceivable
+<p>B.II.3.1.2. Short teaching of its qualities
+<p><span id="show1_1_2_3_1_1" class="foldclosed" onClick="show_folder('1_1_2_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_1_1" class="foldopened" onClick="hide_folder('1_1_2_3_1_1')">-</span>
+B.II.3.1.3. Explanation of its special excellence in comparison with generosity and two further [virtues]
+<ul id="fold1_1_2_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.1.3.1. Explanation in comparison with generosity
+
+</li>
+<li>B.II.3.1.3.2. Explanation in comparison with moral conduct
+
+</li>
+<li>B.II.3.1.3.3. Explanation in comparison with meditative stability
+
+</li>
+
+</ul><p>B.II.3.1.4. Presentation of the reason for this excellence
+<p><span id="show1_1_2_3_1_2" class="foldclosed" onClick="show_folder('1_1_2_3_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_1_2" class="foldopened" onClick="hide_folder('1_1_2_3_1_2')">-</span>
+B.II.3.1.5. Very detailed explanation of the benefit
+<ul id="fold1_1_2_3_1_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.1.5.1. Attainment of enlightenment
+
+</li>
+<li>B.II.3.1.5.2. Firm bodhichitta
+
+</li>
+<li>B.II.3.1.5.3. Attainment of complete perfection
+
+</li>
+<li>B.II.3.1.5.4. Definition of the accumulations
+
+</li>
+<li><span id="show1_1_2_3_1_2_1" class="foldclosed" onClick="show_folder('1_1_2_3_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_1_2_1" class="foldopened" onClick="hide_folder('1_1_2_3_1_2_1')">-</span>
+B.II.3.1.5.5. Elimination of the veils
+<ul id="fold1_1_2_3_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.1.5.5.1. Depiction of the veils to be abandoned
+
+</li>
+<li>B.II.3.1.5.5.2. Explanation of wisdom being the supreme
+
+</li>
+
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_1_2_3_2" class="foldclosed" onClick="show_folder('1_1_2_3_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_2" class="foldopened" onClick="hide_folder('1_1_2_3_2')">-</span>
+B.II.3.2. The way the commentary was composed
+<ul id="fold1_1_2_3_2" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.2.1. The reason for its composition
+
+</li>
+<li>B.II.3.2.2. The basis on which it was composed
+
+</li>
+<li>B.II.3.2.3. Definition of the words of the Buddha
+
+</li>
+<li>B.II.3.2.4. Explanation that everything according with the Buddha&#8217;s words should be accepted
+
+</li>
+<li>B.II.3.2.5. One should not teach contradicting the Buddha&#8217;s words
+
+</li>
+<li><span id="show1_1_2_3_2_1" class="foldclosed" onClick="show_folder('1_1_2_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_2_1" class="foldopened" onClick="hide_folder('1_1_2_3_2_1')">-</span>
+B.II.3.2.6. Explanation of the fault of contradiction
+<ul id="fold1_1_2_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_2_3_2_1_1" class="foldclosed" onClick="show_folder('1_1_2_3_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_2_1_1" class="foldopened" onClick="hide_folder('1_1_2_3_2_1_1')">-</span>
+B.II.3.2.6.1. Defining how the Dharma is abandoned
+<ul id="fold1_1_2_3_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.2.6.1.1. Explanation of how it is abandoned due to the condition of one&#8217;s stream of being
+
+</li>
+<li>B.II.3.2.6.1.2. The ten direct causes for abandoning the Dharma
+
+</li>
+
+</ul><p>B.II.3.2.6.2. Defining how not to abandon the profound Dharma
+<p>B.II.3.2.6.3. Explanation that abandoning the Dharma is more grave than the immeasurably negative acts
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2_3_3" class="foldclosed" onClick="show_folder('1_1_2_3_3')" style="POSITION: absolute">+</span> <span id="hide1_1_2_3_3" class="foldopened" onClick="hide_folder('1_1_2_3_3')">-</span>
+B.II.3.3. Dedication and summary of the meaning
+<ul id="fold1_1_2_3_3" style="POSITION: relative; VISIBILITY: visible;"><li>B.II.3.3.1. Meaning of the benefits combined with a dedication prayer
+
+</li>
+<li>B.II.3.3.2. Summary
+
+</li>
+<li>B.II.3.3.3. The way it was perfected
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>B.III. The way the meaning has been well presented [not translated]
+
+</li>
+
+</ul>
+</li>
+
+</ul><SCRIPT type="text/javascript">
+fold_document();
+</SCRIPT>
+</body>
+</html>
