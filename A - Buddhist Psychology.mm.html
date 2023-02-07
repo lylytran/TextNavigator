@@ -1,0 +1,1498 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>A - Buddhist Psychology (tib.: blo rigs)</title>
+<style type="text/css">
+    li { list-style: none;  margin: 0; }
+    p { margin: 0; }
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a.mapnode:link {text-decoration: none; color: black; }
+    a.mapnode:visited {text-decoration: none; color: black; }
+    a.mapnode:active {text-decoration: none; color: black; }
+    a.mapnode:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+
+<script type="text/javascript">
+   // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+   // Mozilla 0.9.6.
+
+   if (document.layers) {
+      //Netscape 4 specific code
+      pre = 'document.';
+      post = ''; }
+   if (document.getElementById) {
+      //Netscape 6 specific code
+      pre = 'document.getElementById("';
+      post = '").style'; }
+   if (document.all) {
+      //IE4+ specific code
+      pre = 'document.all.';
+      post = '.style'; }
+
+function layer_exists(layer) {
+   try {
+      eval(pre + layer + post);
+      return true; }
+   catch (error) {
+      return false; }}
+
+function show_layer(layer) {
+   eval(pre + layer + post).position = 'relative'; 
+   eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+   eval(pre + layer + post).visibility = 'hidden';
+   eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder)
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+   var i;
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folding_layer(folder+'_'+i); }
+
+   hide_layer('hide'+folder);
+   hide_layer('show'+folder);
+   hide_layer('fold'+folder);
+
+   scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class="foldspecial" onclick="fold_document()">All +</SPAN>
+<SPAN class="foldspecial" onclick="unfold_document()">All -</SPAN>
+<p>A - Buddhist Psychology (tib.: blo rigs)
+<ul><li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</span>
+A1. Why Study Mind?
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_1_1" class="foldclosed" onClick="show_folder('1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1" class="foldopened" onClick="hide_folder('1_1_1')">-</span>
+<span style="color: #0066ff;">Both the world of sentients and non-sentients operate in all the multiple shades purely driven by the mind. The Dhammapada says:</span>
+<ul id="fold1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">Mind is the chief and precedes them all;
+<br>
+If with impure mind, one acts or speaks,
+<br>
+Miseries follows
+<br>
+Like a cart following the ox.
+<br>
+
+<br>
+Mind is the chief and precedes them all;
+<br>
+If with pure mind, one acts or speaks,
+<br>
+Happiness follows
+<br>
+Like a shadow that never leaves.</span>
+</li>
+</ul><p><span id="show1_1_2" class="foldclosed" onClick="show_folder('1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2" class="foldopened" onClick="hide_folder('1_1_2')">-</span>
+<span style="color: #0066ff;">In Abhidharmakosha, Acharya Vasubhandu said:</span>
+<ul id="fold1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">The diversity of the world arose from karmas,
+<br>
+Which in turn is, the intention and its actions.
+<br>
+Intention is the mental karma;
+<br>
+What gives rise to by (the intention) are physical and verbal.</span>
+</li>
+</ul><p><span id="show1_1_3" class="foldclosed" onClick="show_folder('1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_3" class="foldopened" onClick="hide_folder('1_1_3')">-</span>
+<span style="color: #0066ff;">Acharya Chandrakirti said in Madhyamakavatara</span>
+<ul id="fold1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">It is the mind itself that constructed the sentient world
+<br>
+As well as the utterly diverse container world;
+<br>
+So [the Buddha] taught that all beings are produced from karma;
+<br>
+Without mind, there can be no karma.</span>
+</li>
+</ul><p><span id="show1_1_4" class="foldclosed" onClick="show_folder('1_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_4" class="foldopened" onClick="hide_folder('1_1_4')">-</span>
+<span style="color: #0066ff;">His Holiness the Dalai Lama says in a dialogue with Western scientists in 1991:</span>
+<ul id="fold1_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">&#8220;&#8230;There are two reasons why it is important to understand the nature of mind. One is because there is an innate connection between mind and karma (our actions.) The other is that our state of mind plays a crucial role in our experience of happiness and suffering.B1&#8221; It is therefore essential to understand the mind to systematically purifying and enhancing the mind for the process of achieving enlightenment.</span>
+</li>
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_2" class="foldclosed" onClick="show_folder('1_2')" style="POSITION: absolute">+</span> <span id="hide1_2" class="foldopened" onClick="hide_folder('1_2')">-</span>
+A2. Definition and the Nature of Mind
+<ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_2_1" class="foldclosed" onClick="show_folder('1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_2_1" class="foldopened" onClick="hide_folder('1_2_1')">-</span>
+<span style="color: #ff3300;">The definition of mind or consciousness is that which is clear and Knowing.</span>
+<ul id="fold1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_2_1_1" class="foldclosed" onClick="show_folder('1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_2_1_1" class="foldopened" onClick="hide_folder('1_2_1_1')">-</span>
+<span style="color: #0066ff;">His Holiness the Dalai Lama describes the intrinsic connection between the clear and knowing aspects of the mind this way:</span>
+<ul id="fold1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">The knowing nature, or agency &#8230;&nbsp;is called mind and this is nonmaterial &#8230;&nbsp;Cognitive events possess the nature of knowing because of the fundamental nature of clarity that underlies all cognitive events. This is &#8230;&nbsp;the mind&#8217;s fundamental nature, the clear-light nature of mind.</span>
+</li>
+</ul></li>
+</ul><p><span style="color: #0066ff;">Mind (skt.:chitta; tib.:sem) can be classified in a number of different ways; a major way of division is known as seven fold division of mind.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3" class="foldclosed" onClick="show_folder('1_3')" style="POSITION: absolute">+</span> <span id="hide1_3" class="foldopened" onClick="hide_folder('1_3')">-</span>
+<span style="color: #000000;">A3. Seven Fold Division of Mind (tib.:blo rigs bdun)</span>
+<ul id="fold1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_1" class="foldclosed" onClick="show_folder('1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1" class="foldopened" onClick="hide_folder('1_3_1')">-</span>
+A3.1) Direct Valid Perceiver (skt.:pratyaksh; tib.:mngon sum)
+<ul id="fold1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">A non-mistaken knower that is free from conceptuality.</span>
+
+</li>
+<li><span style="color: #0066ff;">Direct valid perceivers are of four types:</span>
+
+</li>
+<li><span id="show1_3_1_1" class="foldclosed" onClick="show_folder('1_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_1" class="foldopened" onClick="hide_folder('1_3_1_1')">-</span>
+<span style="color: #000000;">a) Sense Direct Perceiver (skt.:indriya-pratyaksh; tib.:dbang po&#8217;i mngon sum)</span>
+<ul id="fold1_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_1_1_1" class="foldclosed" onClick="show_folder('1_3_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_1_1" class="foldopened" onClick="hide_folder('1_3_1_1_1')">-</span>
+<span style="color: #ff3300;">A non-mistaken non-conceptual knower that is produced upon the aggregation of three conditions:</span>
+<ul id="fold1_3_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">1) Observed object condition (skt.:alambana-pratyaya; tib.:dmigs rkyen)</span>
+<p><span style="color: #ff3300;">2) Uncommon empowering condition (skt.:asadhara adhipatipratyaya; tib.:thun mong ma yin pa&#8217;i bdag rkyen)</span>
+<p><span style="color: #ff3300;">3) Immediately preceding condition (skt.:samanantara-pratyaya; tib.:de ma thag rkyen)</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_1_1_2" class="foldclosed" onClick="show_folder('1_3_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_1_1_2" class="foldopened" onClick="hide_folder('1_3_1_1_2')">-</span>
+<span style="color: #0066ff;">Five Types of Sense Direct Perceivers</span>
+<ul id="fold1_3_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">i. Visual Sense Consciousness (skt.:cak&#7779;ur-vij&#241;ana; tib.:mig gi shes pa)</span>
+
+</li>
+<li><span style="color: #0066ff;">ii. Auditory Sense Consciousness (skt.:&#347;rotra-vij&#241;ana; tib.:rna ba'i shes pa)</span>
+
+</li>
+<li><span style="color: #0066ff;">iii. Olfactory Sense Consciousness (skt.:ghr&#257;&#7751;a-vij&#241;ana; tib.:sna'i shes pa)</span>
+
+</li>
+<li><span style="color: #0066ff;">iv. Gustatory Sense Consciousness (skt.:jihva-vij&#241;ana; tib.:lce'i rnam shes pa)</span>
+
+</li>
+<li><span style="color: #0066ff;">v. Tactile Sense Consciousness (skt.:k&#257;ya-vij&#241;ana; tib:lus kyi rnam shes pa)</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_1_2" class="foldclosed" onClick="show_folder('1_3_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_1_2" class="foldopened" onClick="hide_folder('1_3_1_2')">-</span>
+<span style="color: #000000;">b) Mental Direct Perceiver (skt.:manasa-pratyaksh; tib.:yid kyi mngon sum)</span>
+<ul id="fold1_3_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A non-mistaken non-conceptual knower that arises from its own mental sense power as its uncommon empowering condition.</span>
+<p><span style="color: #0066ff;">Types of mental direct perceivers:</span>
+<p><span id="show1_3_1_2_1" class="foldclosed" onClick="show_folder('1_3_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_2_1" class="foldopened" onClick="hide_folder('1_3_1_2_1')">-</span>
+i. Those that are indicated in the Sutra
+<ul id="fold1_3_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_1_2_1_1" class="foldclosed" onClick="show_folder('1_3_1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_2_1_1" class="foldopened" onClick="hide_folder('1_3_1_2_1_1')">-</span>
+<span style="color: #0066ff;">Mental direct perceivers depending on the minds</span>
+<ul id="fold1_3_1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">i.e. those induced by sense direct perceivers apprehending any of the five sense objects- forms, sounds, odors, tastes, or tactile objects.</span>
+</li>
+</ul>
+</li>
+
+</ul><p><span id="show1_3_1_2_2" class="foldclosed" onClick="show_folder('1_3_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_3_1_2_2" class="foldopened" onClick="hide_folder('1_3_1_2_2')">-</span>
+ii. Those that are not indicated in the Sutra
+<ul id="fold1_3_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_1_2_2_1" class="foldclosed" onClick="show_folder('1_3_1_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_2_2_1" class="foldopened" onClick="hide_folder('1_3_1_2_2_1')">-</span>
+<span style="color: #0066ff;">Mental direct perceivers induced by states arisen from meditation such as the five clairvoyances.</span>
+<ul id="fold1_3_1_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">(1) The clairvoyance of magical emanation (skt.:rddhi-abhijna; tib.:rdsu &#8216;phrul gyi mngon shes)</span>
+<p><span style="color: #0066ff;">(2) The clairvoyance of divine eye (skt.:divya-chaksur-abhijna; tib.:lha&#8217;i mig gi mngon shes)</span>
+<p><span style="color: #0066ff;">(3) The clairvoyance of divine ear (skt.:divya-shrotra-abhijna; tib.:lha&#8217;i rna ba&#8217;i mngon shes)</span>
+<p><span style="color: #0066ff;">(4) The clairvoyance of former lives (skt.:purva-nivasanusmriti-abhijnana; tib.:sngon gyi gnas rjes su dran pa&#8217;i mngon shes)</span>
+<p><span style="color: #0066ff;">(5) The clairvoyance of reading others&#8217; mind (skt.:para-chitta-jnana-abhijna; tib.:gzan sems shes pa&#8217;i mngon shes)</span>
+</li>
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_3_1_3" class="foldclosed" onClick="show_folder('1_3_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_1_3" class="foldopened" onClick="hide_folder('1_3_1_3')">-</span>
+<span style="color: #000000;">c) Self-cognizant Direct Perceiver (skt.:svasamvedana-pratyaksh; tib.:rang rig mngon sum)</span>
+<ul id="fold1_3_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">A non-mistaken non-conceptual knower that has the aspect of an apprehender.</span>
+
+</li>
+<li><span id="show1_3_1_3_1" class="foldclosed" onClick="show_folder('1_3_1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_3_1" class="foldopened" onClick="hide_folder('1_3_1_3_1')">-</span>
+<span style="color: #0066ff;">Self-cognizant direct perceivers can be divided into three types:</span>
+<ul id="fold1_3_1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">i. Those that are prime/ valid cognizers.
+<br>
+ii. Those that are subsequent cognizers.
+<br>
+iii.Those which are non-discerning direct perceivers.</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_1_4" class="foldclosed" onClick="show_folder('1_3_1_4')" style="POSITION: absolute">+</span> <span id="hide1_3_1_4" class="foldopened" onClick="hide_folder('1_3_1_4')">-</span>
+<span style="color: #000000;">d) Yogic Direct Perceiver (skt.:yogi-pratyaksh; tib.:rnal &#8216;byor mngon sum)</span>
+<ul id="fold1_3_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A non-mistaken non-conceptual exalted knower in the continuum of a superior that is produced from a meditative stabilization which is a union of calm abiding and special insight and which has become its own uncommon empowering condition.</span>
+<p><span style="color: #0066ff;">Yogic direct perceivers can be divided in various ways:</span>
+<p><span id="show1_3_1_4_1" class="foldclosed" onClick="show_folder('1_3_1_4_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1_4_1" class="foldopened" onClick="hide_folder('1_3_1_4_1')">-</span>
+<span style="color: #000000;">i. From the viewpoint of the person who possesses it</span>
+<ul id="fold1_3_1_4_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">Yogic direct perceivers of hearers (skt.:shravaka; tib.:nyan thos), solitary realizers (skt.:pratyekabuddha; tib.:rang rgyal) and Mahayanists.</span>
+</li>
+</ul><p><span id="show1_3_1_4_2" class="foldclosed" onClick="show_folder('1_3_1_4_2')" style="POSITION: absolute">+</span> <span id="hide1_3_1_4_2" class="foldopened" onClick="hide_folder('1_3_1_4_2')">-</span>
+<span style="color: #000000;">ii. From the viewpoint of their entities</span>
+<ul id="fold1_3_1_4_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">Yogic direct perceivers of path of seeing, path of meditation and path of no more learning.</span>
+
+</li>
+
+</ul><p><span id="show1_3_1_4_3" class="foldclosed" onClick="show_folder('1_3_1_4_3')" style="POSITION: absolute">+</span> <span id="hide1_3_1_4_3" class="foldopened" onClick="hide_folder('1_3_1_4_3')">-</span>
+<span style="color: #000000;">iii. From the viewpoint of their aspects</span>
+<ul id="fold1_3_1_4_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">One can posit sixteen kinds of yogic direct perceivers, having the aspects of sixteen attributes of the four noble truths such as impermanence, suffering, emptiness, selflessness and so forth.</span>
+</li>
+</ul><p><span id="show1_3_1_4_4" class="foldclosed" onClick="show_folder('1_3_1_4_4')" style="POSITION: absolute">+</span> <span id="hide1_3_1_4_4" class="foldopened" onClick="hide_folder('1_3_1_4_4')">-</span>
+<span style="color: #000000;">iv. From the viewpoint of having aspect of coarse and subtle selflessness</span>
+<ul id="fold1_3_1_4_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">With respect to selflessness as the object of yogic direct perception, on top of the yogic direct perception viewing the subtle selflessness of autonomous substantial reality, some scholars also include yogic direct perception viewing the gross selflessness in the context of selflessness of permanent, unitary and independent self.</span>
+<p><span style="color: #0066ff;">Chittamatra and Madhyamaka schools include the yogic direct perceiver which views the selflessness of phenomena also. As indicated by Acharya Kamalashila, these two schools identify all teachings of the Buddha to either point towards the ultimate reality, or lead towards the ultimate reality or establishes the ultimate reality. The teachings on impermanence, misery and so forth, belong to the first category, whereas the teachings on the selflessness of person in the context of emptiness of autonomous substantial sell and the emptiness of permanent, unitary and independent self belong to the second category and the teachings on the selflessness of phenomena fall under the third category to establishes the ultimate truth.</span>
+</li>
+</ul></li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_2" class="foldclosed" onClick="show_folder('1_3_2')" style="POSITION: absolute">+</span> <span id="hide1_3_2" class="foldopened" onClick="hide_folder('1_3_2')">-</span>
+<span style="color: #000000;">A3.2) Inferential Cognizer (skt.:anuman; tib.:rjes dpag)</span>
+<ul id="fold1_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A determinative knower, which by dependence on a correct sign as its basis, is incontrovertible with regard to a hidden phenomenon as its object of comprehension.</span>
+<p><span id="show1_3_2_1" class="foldclosed" onClick="show_folder('1_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_2_1" class="foldopened" onClick="hide_folder('1_3_2_1')">-</span>
+<span style="color: #0066ff;">There are three types of inferential cognizers by way of their entities:</span>
+<ul id="fold1_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_2_1_1" class="foldclosed" onClick="show_folder('1_3_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_2_1_1" class="foldopened" onClick="hide_folder('1_3_2_1_1')">-</span>
+a) Inference through the power of fact (skt.:vastu-bala-anuman; tib.:dngos stobs rjes dpag)
+<ul id="fold1_3_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A determinative knower, which by dependence on a correct sign by the power of a fact as its basis, is incontrovertible with respect to a slightly hidden phenomenon as its object of comprehension.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_2_1_2" class="foldclosed" onClick="show_folder('1_3_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_2_1_2" class="foldopened" onClick="hide_folder('1_3_2_1_2')">-</span>
+b) Inference through confidence (skt.:apta-anuman; tib.:yid ches rjes dpag)
+<ul id="fold1_3_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A determinative knower, which by dependence on a correct sign of confidence as its basis, is incontrovertible with regard to a very hidden phenomenon as its object of comprehension.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_2_1_3" class="foldclosed" onClick="show_folder('1_3_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_2_1_3" class="foldopened" onClick="hide_folder('1_3_2_1_3')">-</span>
+c) Inference through renown (Convention) (skt.:prasiddha-anuman; tib.:grags pa&#8217;i rjes dpag)
+<ul id="fold1_3_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A determinative knower, which by dependence on a correct sign of renown as its basis, is incontrovertible with respect to a terminological suitability as its object of comprehension.</span>
+</li>
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_3_3" class="foldclosed" onClick="show_folder('1_3_3')" style="POSITION: absolute">+</span> <span id="hide1_3_3" class="foldopened" onClick="hide_folder('1_3_3')">-</span>
+<span style="color: #000000;">A3.3) Subsequent Cognizer (skt.:parichchhinna-jnana; tib.:bcad shes)</span>
+<ul id="fold1_3_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_3_3_1" class="foldclosed" onClick="show_folder('1_3_3_1')" style="POSITION: absolute">+</span> <span id="hide1_3_3_1" class="foldopened" onClick="hide_folder('1_3_3_1')">-</span>
+<span style="color: #ff3300;">A knower which is not a prime cognizer and which realizes what has already been realized by the former prime cognizer inducing it.
+<br>
+It is also defined as &#8216;a knower which realizes that which has already been realized&#8217;.</span>
+<ul id="fold1_3_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">The first moment of a consciousness engages with an object through its own power and is thus known as prime cognizer.
+<br>
+Whereas the subsequent moments realize their object merely by the force of the preceding prime cognizer that induced them.
+<br>
+Therefore they are referred to as subsequent cognizers.</span>
+</li>
+</ul><p><span id="show1_3_3_2" class="foldclosed" onClick="show_folder('1_3_3_2')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2" class="foldopened" onClick="hide_folder('1_3_3_2')">-</span>
+<span style="color: #0066ff;">Subsequent cognizers are of two types:</span>
+<ul id="fold1_3_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_3_2_1" class="foldclosed" onClick="show_folder('1_3_3_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_1" class="foldopened" onClick="hide_folder('1_3_3_2_1')">-</span>
+a) Direct Subsequent Cognizer (skt.:pratyaksh-parichchhinna-jnana; tib.:mgon sum bcad shes)
+<ul id="fold1_3_3_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_3_2_1_1" class="foldclosed" onClick="show_folder('1_3_3_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_1_1" class="foldopened" onClick="hide_folder('1_3_3_2_1_1')">-</span>
+i. Sense Direct Subsequent Cognizer
+<ul id="fold1_3_3_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">An illustration is the second moment of a sense direct perceiver apprehending a form and so forth.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_3_2_1_2" class="foldclosed" onClick="show_folder('1_3_3_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_1_2" class="foldopened" onClick="hide_folder('1_3_3_2_1_2')">-</span>
+ii. Mental Direct Subsequent Cognizer
+<ul id="fold1_3_3_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">An illustration is the second moment of a mental direct perceiver in the continuum of a Superior which is apprehending a form and so forth as they are smallest moment and for ordinary beings are awareness to which an object appears but is not ascertained.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_3_2_1_3" class="foldclosed" onClick="show_folder('1_3_3_2_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_1_3" class="foldopened" onClick="hide_folder('1_3_3_2_1_3')">-</span>
+iii.Self-cognizant Direct Subsequent Cognizer
+<ul id="fold1_3_3_2_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">An illustration is the second moment of a self-cognizer which is experiencing a sense direct perceiver apprehending a form and so forth.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_3_2_1_4" class="foldclosed" onClick="show_folder('1_3_3_2_1_4')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_1_4" class="foldopened" onClick="hide_folder('1_3_3_2_1_4')">-</span>
+iv.Yogic Direct Subsequent Cognizer
+<ul id="fold1_3_3_2_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">An illustration is the second moment of the yogic direct perceiver directly realizing the selflessness of person. </span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_3_2_2" class="foldclosed" onClick="show_folder('1_3_3_2_2')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_2" class="foldopened" onClick="hide_folder('1_3_3_2_2')">-</span>
+b) Conceptual Subsequent Cognizer (skt.:kalpana-parichchhinna-jnana; tib.:rtog pa bcad shes)
+<ul id="fold1_3_3_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_3_2_2_1" class="foldclosed" onClick="show_folder('1_3_3_2_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_2_1" class="foldopened" onClick="hide_folder('1_3_3_2_2_1')">-</span>
+i. Those induced by direct perception
+<ul id="fold1_3_3_2_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A conceptual subsequent cognizer induced by direct perception is, for example, a consciousness ascertaining blue which is produced subsequent to a direct perceiver apprehending blue.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_3_2_2_2" class="foldclosed" onClick="show_folder('1_3_3_2_2_2')" style="POSITION: absolute">+</span> <span id="hide1_3_3_2_2_2" class="foldopened" onClick="hide_folder('1_3_3_2_2_2')">-</span>
+ii. Those induced by inference
+<ul id="fold1_3_3_2_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A conceptual subsequent cognizer induced by inference is, for example, the second moment of an inferential consciousness that realizes sound to be impermanent.</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_3_4" class="foldclosed" onClick="show_folder('1_3_4')" style="POSITION: absolute">+</span> <span id="hide1_3_4" class="foldopened" onClick="hide_folder('1_3_4')">-</span>
+<span style="color: #000000;">A3.4) Correctly Assuming Consciousness (skt.:manah-pariksha; tib.:yid dpyod)</span>
+<ul id="fold1_3_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">An awareness that does not cognize an object with respect to which super-impositions have been eliminated although it adheres onepointedly to the phenomenon which is its principal object of engagement.</span>
+<p><span id="show1_3_4_1" class="foldclosed" onClick="show_folder('1_3_4_1')" style="POSITION: absolute">+</span> <span id="hide1_3_4_1" class="foldopened" onClick="hide_folder('1_3_4_1')">-</span>
+<span style="color: #0066ff;">Correctly Assuming Consciousness with respect to any thesis for example, &#8216;Sound is impermanent&#8217; can be generated in three ways:</span>
+<ul id="fold1_3_4_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_4_1_1" class="foldclosed" onClick="show_folder('1_3_4_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_4_1_1" class="foldopened" onClick="hide_folder('1_3_4_1_1')">-</span>
+a) Without a reason
+<ul id="fold1_3_4_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A correctly assuming consciousness without a reason is an awareness which thinks, &#8216;Sound is impermanent,&#8217; without any reason at all. This is not something that is ascertained or realized, but is merely thought in an unreasoned manner.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_4_1_2" class="foldclosed" onClick="show_folder('1_3_4_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_4_1_2" class="foldopened" onClick="hide_folder('1_3_4_1_2')">-</span>
+b) Without ascertaining the reason
+<ul id="fold1_3_4_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A correctly assuming consciousness without ascertaining the reason is an awareness which thinks, &#8216;Sound is impermanent,&#8217; based on a sign of being a product, but it has not ascertained that it is a product and that whatever is a product is necessarily impermanent. (It has not ascertained the presence of the reason in the subject or the forward and counter pervasions and thus the three modes are not established)</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_4_1_3" class="foldclosed" onClick="show_folder('1_3_4_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_4_1_3" class="foldopened" onClick="hide_folder('1_3_4_1_3')">-</span>
+c) Depending on a facsimile of reason
+<ul id="fold1_3_4_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A correctly assuming consciousness depending on a facsimile of a reason is an awareness which thinks, &#8216;Sound is impermanent,&#8217; from the sign of being an object of comprehension. Thus, in this type of correctly assuming consciousness, there is no pervasion between the reason and the predicate of the thesis &#8211;&nbsp;whatever is an object of comprehension is not necessarily impermanent because there are objects of comprehension which are impermanent and objects of comprehension that are permanent.</span>
+</li>
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_3_5" class="foldclosed" onClick="show_folder('1_3_5')" style="POSITION: absolute">+</span> <span id="hide1_3_5" class="foldopened" onClick="hide_folder('1_3_5')">-</span>
+<span style="color: #000000;">A3.5) Non-Discerning Direct Perceiver (skt.:aniyata-pratibha; tib.:snang la ma nges pa)</span>
+<ul id="fold1_3_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A knower to which the specifically characterized phenomenon (impermanent phenomenon) which is its object of engagement clearly appears but is unable to induce ascertainment with respect to it.</span>
+<p><span id="show1_3_5_1" class="foldclosed" onClick="show_folder('1_3_5_1')" style="POSITION: absolute">+</span> <span id="hide1_3_5_1" class="foldopened" onClick="hide_folder('1_3_5_1')">-</span>
+<span style="color: #0066ff;">Nondiscerning direct perceivers are of three types:</span>
+<ul id="fold1_3_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_5_1_1" class="foldclosed" onClick="show_folder('1_3_5_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_5_1_1" class="foldopened" onClick="hide_folder('1_3_5_1_1')">-</span>
+a) Non-discerning Sense Direct Perceiver
+<ul id="fold1_3_5_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">An illustration of the sense direct perceiver to which an object appears but is not ascertained, is the sense direct perceiver apprehending blue which induces the doubt, &#8216;Did I see blue or not?&#8217;</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_5_1_2" class="foldclosed" onClick="show_folder('1_3_5_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_5_1_2" class="foldopened" onClick="hide_folder('1_3_5_1_2')">-</span>
+b) Non-discerning Mental Direct Perceiver
+<ul id="fold1_3_5_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">An illustration of the mental direct perceiver to which an object appears but is not ascertained, is the mental direct perceiver apprehending a form or so forth in the continuum of an ordinary being.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_5_1_3" class="foldclosed" onClick="show_folder('1_3_5_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_5_1_3" class="foldopened" onClick="hide_folder('1_3_5_1_3')">-</span>
+c) Non-discerning Self-cognizant Direct Perceiver
+<ul id="fold1_3_5_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">An illustration of self-cognizant direct perceiver to which an object appears but is not ascertained, is the self-cognizer experiencing the mental direct perceiver apprehending a form or so forth in the continuum of an ordinary being.</span>
+</li>
+</ul>
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_3_6" class="foldclosed" onClick="show_folder('1_3_6')" style="POSITION: absolute">+</span> <span id="hide1_3_6" class="foldopened" onClick="hide_folder('1_3_6')">-</span>
+<span style="color: #000000;">A3.6) Doubting Consciousness (skt.:samshaya; tib.:the tshom)</span>
+<ul id="fold1_3_6" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">A knower which by its own power has qualms in two directions.</span>
+
+</li>
+<li><span id="show1_3_6_1" class="foldclosed" onClick="show_folder('1_3_6_1')" style="POSITION: absolute">+</span> <span id="hide1_3_6_1" class="foldopened" onClick="hide_folder('1_3_6_1')">-</span>
+<span style="color: #0066ff;">Doubting consciousnesses are of three types:</span>
+<ul id="fold1_3_6_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_6_1_1" class="foldclosed" onClick="show_folder('1_3_6_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_6_1_1" class="foldopened" onClick="hide_folder('1_3_6_1_1')">-</span>
+a) Doubt tending towards the fact
+<ul id="fold1_3_6_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Doubting consciousness tending towards fact is, for example, a two-pointed mind thinking, &#8216;Sound is probably impermanent&#8217;.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_6_1_2" class="foldclosed" onClick="show_folder('1_3_6_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_6_1_2" class="foldopened" onClick="hide_folder('1_3_6_1_2')">-</span>
+b) Doubt tending towards distortion
+<ul id="fold1_3_6_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Doubting consciousness tending towards distortion is, for example, a two-pointed mind thinking, &#8216;Sound is probably permanent&#8217;</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_6_1_3" class="foldclosed" onClick="show_folder('1_3_6_1_3')" style="POSITION: absolute">+</span> <span id="hide1_3_6_1_3" class="foldopened" onClick="hide_folder('1_3_6_1_3')">-</span>
+c) Doubt tending towards both equally
+<ul id="fold1_3_6_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Doubting consciousness tending towards both equally is, for example, a hesitating consciousness which wonders whether sound is permanent or impermanent.</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3_7" class="foldclosed" onClick="show_folder('1_3_7')" style="POSITION: absolute">+</span> <span id="hide1_3_7" class="foldopened" onClick="hide_folder('1_3_7')">-</span>
+<span style="color: #000000;">A3.7) Deceptive [Wrong] Consciousness (skt.:viparyaya-jnana; tib.:log shes)</span>
+<ul id="fold1_3_7" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">A knower which is mistaken with regard to its object of engagement.</span>
+
+</li>
+<li><span id="show1_3_7_1" class="foldclosed" onClick="show_folder('1_3_7_1')" style="POSITION: absolute">+</span> <span id="hide1_3_7_1" class="foldopened" onClick="hide_folder('1_3_7_1')">-</span>
+<span style="color: #0066ff;">There are two types of deceptive consciousness:</span>
+<ul id="fold1_3_7_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_7_1_1" class="foldclosed" onClick="show_folder('1_3_7_1_1')" style="POSITION: absolute">+</span> <span id="hide1_3_7_1_1" class="foldopened" onClick="hide_folder('1_3_7_1_1')">-</span>
+a) Conceptual Deceptive Consciousness
+<ul id="fold1_3_7_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">For example, a thought consciousness apprehending horns of a rabbit and a consciousness apprehending selfhood of person.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_7_1_2" class="foldclosed" onClick="show_folder('1_3_7_1_2')" style="POSITION: absolute">+</span> <span id="hide1_3_7_1_2" class="foldopened" onClick="hide_folder('1_3_7_1_2')">-</span>
+b) Non-conceptual Deceptive Consciousness
+<ul id="fold1_3_7_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_7_1_2_1" class="foldclosed" onClick="show_folder('1_3_7_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_3_7_1_2_1" class="foldopened" onClick="hide_folder('1_3_7_1_2_1')">-</span>
+i. Non-conceptual Sense Deceptive Consciousness
+<ul id="fold1_3_7_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">For example, a sense consciousness seeing two moons or a sense consciousness to which Snow Mountains appear blue.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_3_7_1_2_2" class="foldclosed" onClick="show_folder('1_3_7_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_3_7_1_2_2" class="foldopened" onClick="hide_folder('1_3_7_1_2_2')">-</span>
+ii. Non-conceptual Mental Deceptive Consciousness
+<ul id="fold1_3_7_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">For example, a dream consciousness to which blue clearly appears.</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_4" class="foldclosed" onClick="show_folder('1_4')" style="POSITION: absolute">+</span> <span id="hide1_4" class="foldopened" onClick="hide_folder('1_4')">-</span>
+A4. Three Fold Division of Mind
+<ul id="fold1_4" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_4_1" class="foldclosed" onClick="show_folder('1_4_1')" style="POSITION: absolute">+</span> <span id="hide1_4_1" class="foldopened" onClick="hide_folder('1_4_1')">-</span>
+A4.1 Conceptual Consciousness (tib.:rtog pa)
+<ul id="fold1_4_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A mind that apprehends its object through mixing it with sound/meaning generality.</span>
+<p><span style="color: #0066ff;">Conceptual consciousness is always a mistaken mind for it is mistaken with respect to appearance of the object. But, it may or may not be deceptive, for example, conceptual experience of emptiness is a mistaken mind but not a deceptive mind whereas self grasping ignorance is deceptive for it is mistaken with respect to object of engagement.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_4_2" class="foldclosed" onClick="show_folder('1_4_2')" style="POSITION: absolute">+</span> <span id="hide1_4_2" class="foldopened" onClick="hide_folder('1_4_2')">-</span>
+A4.2 Non-conceptual Non-mistaken Consciousness
+<ul id="fold1_4_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">Awareness that takes a specifically characterized phenomenon as their apprehended object</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_4_3" class="foldclosed" onClick="show_folder('1_4_3')" style="POSITION: absolute">+</span> <span id="hide1_4_3" class="foldopened" onClick="hide_folder('1_4_3')">-</span>
+A4.3 Non-conceptual Mistaken Consciousness
+<ul id="fold1_4_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Awareness that takes a clearly appearing &nbsp;(non-conceptual) non-existent as its apprehended object &#8211;&nbsp;This is synonymous with non-conceptual deceptive [wrong] consciousness.</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_5" class="foldclosed" onClick="show_folder('1_5')" style="POSITION: absolute">+</span> <span id="hide1_5" class="foldopened" onClick="hide_folder('1_5')">-</span>
+A5. Two Fold Divisions of Mind
+<ul id="fold1_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_5_1" class="foldclosed" onClick="show_folder('1_5_1')" style="POSITION: absolute">+</span> <span id="hide1_5_1" class="foldopened" onClick="hide_folder('1_5_1')">-</span>
+A5.1 Prime Cognizer and Non-prime Consciousness (tib.:tsed ma dang tsed min)
+<ul id="fold1_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_5_1_1" class="foldclosed" onClick="show_folder('1_5_1_1')" style="POSITION: absolute">+</span> <span id="hide1_5_1_1" class="foldopened" onClick="hide_folder('1_5_1_1')">-</span>
+a. Prime Cognizer
+<ul id="fold1_5_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A prime cognizer is defined as a knower which is new and incontrovertible.</span>
+<p><span style="color: #0066ff;">Some examples from within the seven fold division of mind are&#8211; first moment of direct valid perceivers and inferential cognizers.</span>
+</li>
+</ul><p><span id="show1_5_1_2" class="foldclosed" onClick="show_folder('1_5_1_2')" style="POSITION: absolute">+</span> <span id="hide1_5_1_2" class="foldopened" onClick="hide_folder('1_5_1_2')">-</span>
+b. non-prime consciousness
+<ul id="fold1_5_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">The definition of non-prime consciousness is a knower which is not new and incontrovertible.</span>
+<p><span style="color: #0066ff;">Subsequent cognizers, correctly assuming consciousnesses, doubting consciousnesses, non-discerning direct perceivers and deceptive [wrong] consciousnesses are the examples of non-prime consciousnesses.</span>
+</li>
+</ul><p><span style="color: #0066ff;">This is an exhaustive division of awareness and knower as any specific consciousness is one or the other. Limiting the types of prime cognitions to two in this way is specifically done to set the Buddhist view off from that of various non-Buddhist systems, which accept many other sources of prime, or valid cognition such as sound, example and so forth.</span>
+</li>
+</ul><p><span id="show1_5_2" class="foldclosed" onClick="show_folder('1_5_2')" style="POSITION: absolute">+</span> <span id="hide1_5_2" class="foldopened" onClick="hide_folder('1_5_2')">-</span>
+A5.2 Conceptual Consciousness and Non-conceptual Consciousness
+<ul id="fold1_5_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This is an exhaustive division of awareness and knower. The emphasis here being on the manner in which a consciousness apprehends its object &#8211;&nbsp;either directly (non-conceptual consciousness) or by means of a generic image (conceptual consciousness)</span>
+<p><span style="color: #0066ff;">Within seven fold division of mind, all inferential cognizers, correctly assuming consciousnesses, and doubting consciousnesses, as well as some subsequent cognizers and some deceptive [wrong] consciousnesses, are posited as the illustrations of conceptual consciousnesses. 
+<br>
+The remaining awarenesses and knowers &#8211;&nbsp;all direct valid perceivers and nondiscerning direct perceivers as well as some part of subsequent cognizers and also some part of deceptive [wrong] consciousnesses are the examples of non-conceptual consciousnesses.</span>
+</li>
+</ul><p><span id="show1_5_3" class="foldclosed" onClick="show_folder('1_5_3')" style="POSITION: absolute">+</span> <span id="hide1_5_3" class="foldopened" onClick="hide_folder('1_5_3')">-</span>
+A5.3 Mistaken Consciousness (tib.:&#8216;khrul shes) and Non-Mistaken Consciousness
+<ul id="fold1_5_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This division is made in terms of whether &#8211;&nbsp;a consciousness is mistaken with regard to its appearing or apprehended object (mistaken consciousness) or is non- mistaken with regard to its appearing or apprehended object (non-mistaken consciousness) as opposed to their object of engagement. -</span>
+<p><span style="color: #0066ff;">Among seven types of knower and awareness, all non-mistaken nonconceptual consciousnesses i.e. direct valid perceivers are non-mistaken consciousnesses. 
+<br>
+And, all conceptual consciousnesses are included within mistaken consciousness inasmuch the image of the object they are comprehending appears to them to be the actual object. 
+<br>
+Non-conceptual deceptive [wrong] consciousnesses are also mistaken as their appearing object and object of engagement appear as same thing which is wrong.</span>
+</li>
+</ul><p><span id="show1_5_4" class="foldclosed" onClick="show_folder('1_5_4')" style="POSITION: absolute">+</span> <span id="hide1_5_4" class="foldopened" onClick="hide_folder('1_5_4')">-</span>
+A5.4 Mental Consciousness (tib.:yid shes) and Sense Consciousness (tib.:dbang shes)
+<ul id="fold1_5_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This twofold division is made in terms of whether a consciousness is produced in dependence on a mental sense power (mental consciousness) or a physical sense power such as eye, ear and so forth as its uncommon empowering condition.</span>
+<p><span style="color: #0066ff;">Sense consciousnesses are necessarily non-conceptual; 
+<br>
+mental consciousness can either be conceptual or non-conceptual: Mental, selfcognizer and yogic are all non-conceptual mental consciousnesses whereas inference, correct assumption, doubt and so forth are conceptual mental consciousnesses.</span>
+</li>
+</ul><p><span id="show1_5_5" class="foldclosed" onClick="show_folder('1_5_5')" style="POSITION: absolute">+</span> <span id="hide1_5_5" class="foldopened" onClick="hide_folder('1_5_5')">-</span>
+A5.5 Eliminative Engager Awareness (tib.:sel &#8216;jug) and Collective Engager Awareness (tib.:sgrub &#8216;jug)
+<ul id="fold1_5_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This division, again exhaustive, resembles the division into conceptual and non-conceptual consciousnesses but here the emphasis is on the manner in which that consciousness apprehends its object.</span>
+<p><span id="show1_5_5_1" class="foldclosed" onClick="show_folder('1_5_5_1')" style="POSITION: absolute">+</span> <span id="hide1_5_5_1" class="foldopened" onClick="hide_folder('1_5_5_1')">-</span>
+a) Eliminative Engager
+<ul id="fold1_5_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a mind that engages its object by the power of label. The word &#8216;label&#8217; here refers to a meaning generality.</span>
+<p><span style="color: #0066ff;">Eliminative engager engages its object in a negative or eliminative manner, thus, it can never come to perceive all the uncommon features of its object such as its impermanence, momentariness and so forth. They are synonymous with conceptual consciousnesses.</span>
+</li>
+</ul><p><span id="show1_5_5_2" class="foldclosed" onClick="show_folder('1_5_5_2')" style="POSITION: absolute">+</span> <span id="hide1_5_5_2" class="foldopened" onClick="hide_folder('1_5_5_2')">-</span>
+b) Collective Engager
+<ul id="fold1_5_5_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a mind that engages with its object by the power of the object, which is the object&#8217;s casting its aspect to the mind apprehending it.</span>
+<p><span style="color: #0066ff;">It engages its object in a positive or collective manner, thus all the uncommon features of the object such as its impermanence, momentariness and so forth, appear to that consciousness. However, the mere appearance of all these to the consciousness does not mean that they are necessarily ascertained; most are not noticed due to the interference of thought and predispositions.</span>
+</li>
+</ul></li>
+</ul><p><span id="show1_5_6" class="foldclosed" onClick="show_folder('1_5_6')" style="POSITION: absolute">+</span> <span id="hide1_5_6" class="foldopened" onClick="hide_folder('1_5_6')">-</span>
+A5.6 Minds and Mental Factors
+<ul id="fold1_5_6" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This twofold division is a way of describing the various functions of consciousness.</span>
+<p><span id="show1_5_6_1" class="foldclosed" onClick="show_folder('1_5_6_1')" style="POSITION: absolute">+</span> <span id="hide1_5_6_1" class="foldopened" onClick="hide_folder('1_5_6_1')">-</span>
+a) Mind
+<ul id="fold1_5_6_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">Mind (skt.:chitta; tib.:sems) here is synonymous with main mind or primary mind (tib.:gtso sems).The definition of mind [in the context of mind and mental factors] is an awareness which has similarity with the mental factors that arise as its accompaniers. This can also be understood as an awareness which apprehends the mere entity of the object of engagement. Some examples of the main minds are the five sense consciousnesses and mental consciousness.</span>
+</li>
+</ul><p><span id="show1_5_6_2" class="foldclosed" onClick="show_folder('1_5_6_2')" style="POSITION: absolute">+</span> <span id="hide1_5_6_2" class="foldopened" onClick="hide_folder('1_5_6_2')">-</span>
+b) Mental Factors
+<ul id="fold1_5_6_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">A mental factor (skt.:chaitta; tib.:sems byung) is defined as the aspect of awareness that engages with its object with different functions of the awareness. The definition of a mental factor [in the context of mind and mental factors] is an awareness which has similarity with the primary mind that has it as an accompanier.</span>
+</li>
+</ul><p><span id="show1_5_6_3" class="foldclosed" onClick="show_folder('1_5_6_3')" style="POSITION: absolute">+</span> <span id="hide1_5_6_3" class="foldopened" onClick="hide_folder('1_5_6_3')">-</span>
+<span style="color: #0066ff;">Minds and mental factors are accompanied by each other and have five commonalities between them, with respect to any particular object.</span>
+<ul id="fold1_5_6_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">1) They have a common object of observation and thus are similar with regard to object of engagement.</span>
+<p><span style="color: #0066ff;">2) They are generated in the same aspect, in that if eye consciousness is generated in the aspect of blue, the accompanying mental factors are also generated in the aspect of blue.</span>
+<p><span style="color: #0066ff;">3) They exist in the same time, in that when one is produced the other is produced.</span>
+<p><span style="color: #0066ff;">4) They have common uncommon empowering condition and thus have a common basis.</span>
+<p><span style="color: #0066ff;">5) They are the same substantial entity, in that the production, abiding and cessation of the two occur simultaneously, for example, only a single substantial entity of feeling arises as the accompanier of a single substantial entity of an eye perceiver.</span>
+</li>
+</ul><p><span style="color: #0066ff;">There are innumerable mental factors each with a specific function that relates to its object. In the Sanskrit Nalanda tradition one finds the mention of fifty one mental factors whereas in the Pali tradition there is a mention of fifty two mental factors, enumeration of which is enclosed as appendage to the text.</span>
+</li>
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_6" class="foldclosed" onClick="show_folder('1_6')" style="POSITION: absolute">+</span> <span id="hide1_6" class="foldopened" onClick="hide_folder('1_6')">-</span>
+A6. Fifty One Mental Factors
+<ul id="fold1_6" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">Mental factors as enumerated in the Abhidharma of Sanskrit Nalanda tradition are classified in six groups:</span>
+<p><span id="show1_6_1" class="foldclosed" onClick="show_folder('1_6_1')" style="POSITION: absolute">+</span> <span id="hide1_6_1" class="foldopened" onClick="hide_folder('1_6_1')">-</span>
+A6.1) Five Omnipresent Mental Factors (skt.:sarvatraga; tib.:kun &#8216;gro)
+<ul id="fold1_6_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">The following five mental factors are known as omnipresent mental factors as they accompany every primary mind.</span>
+<p><span id="show1_6_1_1" class="foldclosed" onClick="show_folder('1_6_1_1')" style="POSITION: absolute">+</span> <span id="hide1_6_1_1" class="foldopened" onClick="hide_folder('1_6_1_1')">-</span>
+1) Feeling (skt.:vedan&#257;; tib.:tshor ba)
+<ul id="fold1_6_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">This mental factor assumes the experience of either pleasure, pain or neutrality.</span>
+
+</li>
+
+</ul><p><span id="show1_6_1_2" class="foldclosed" onClick="show_folder('1_6_1_2')" style="POSITION: absolute">+</span> <span id="hide1_6_1_2" class="foldopened" onClick="hide_folder('1_6_1_2')">-</span>
+2) Discrimination (skt.:samjn&#257;; tib.:&#8216;du shes)
+<ul id="fold1_6_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Mental factor with the functionality to apprehend the uncommon signs or characteristics of an object, to distinguish the given object from other phenomena.</span>
+</li>
+</ul><p><span id="show1_6_1_3" class="foldclosed" onClick="show_folder('1_6_1_3')" style="POSITION: absolute">+</span> <span id="hide1_6_1_3" class="foldopened" onClick="hide_folder('1_6_1_3')">-</span>
+3) Intention (skt.:chetn&#257;; tib.:sems pa)
+<ul id="fold1_6_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It directs the activity of each of the other factors within the main mind in respect to the object.</span>
+
+</li>
+
+</ul><p><span id="show1_6_1_4" class="foldclosed" onClick="show_folder('1_6_1_4')" style="POSITION: absolute">+</span> <span id="hide1_6_1_4" class="foldopened" onClick="hide_folder('1_6_1_4')">-</span>
+4) Contact (skt.:sparsha; tib.:reg pa)
+<ul id="fold1_6_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A mental factor with the functionality to give rise to the changes of the senses for the three kinds of feelings through coming into contact of the object, sense power and consciousness.</span>
+</li>
+</ul><p><span id="show1_6_1_5" class="foldclosed" onClick="show_folder('1_6_1_5')" style="POSITION: absolute">+</span> <span id="hide1_6_1_5" class="foldopened" onClick="hide_folder('1_6_1_5')">-</span>
+5) Attention (skt.:manasi-k&#257;ra; tib.:yid la byed pa)
+<ul id="fold1_6_1_5" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">This mental factor directs the mind to the particular object of observation.</span>
+
+</li>
+
+</ul></li>
+</ul><p><span id="show1_6_2" class="foldclosed" onClick="show_folder('1_6_2')" style="POSITION: absolute">+</span> <span id="hide1_6_2" class="foldopened" onClick="hide_folder('1_6_2')">-</span>
+A6.2) Five Object-ascertaining / Determinative Mental Factors (skt.:vishayapratiniyama; tib.:yul nges)
+<ul id="fold1_6_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">These mental factors help ascertain the object of the main mind. If one of these is present, all five are present; however these do not accompany all minds. How close the ascertained object is to the reality depends on how enlightened or deluded the ascertaining mind is.</span>
+<p><span id="show1_6_2_1" class="foldclosed" onClick="show_folder('1_6_2_1')" style="POSITION: absolute">+</span> <span id="hide1_6_2_1" class="foldopened" onClick="hide_folder('1_6_2_1')">-</span>
+1) Aspiration (skt.:chhanda; tib.:&#8216;dun pa)
+<ul id="fold1_6_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Aspiration, like intention, directs the mind towards an object. It is the mind that wishes to engage in a particular activity and takes a strong interest in the process.</span>
+<p><span style="color: #0066ff;">Although intention and aspiration are similar, intention acts as one of the fundamental aspects of any mind, whereas aspiration is the result of many processes occurring and is not always present.</span>
+</li>
+</ul><p><span id="show1_6_2_2" class="foldclosed" onClick="show_folder('1_6_2_2')" style="POSITION: absolute">+</span> <span id="hide1_6_2_2" class="foldopened" onClick="hide_folder('1_6_2_2')">-</span>
+2) Admiration (skt.:adhimoksha; tib.:mos pa)
+<ul id="fold1_6_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Seeing that the ascertained object has qualities that are worthwhile (can be positive or negative), admiration stabilizes the relationship with the object by directing the mind toward it more forcefully.</span>
+</li>
+</ul><p><span id="show1_6_2_3" class="foldclosed" onClick="show_folder('1_6_2_3')" style="POSITION: absolute">+</span> <span id="hide1_6_2_3" class="foldopened" onClick="hide_folder('1_6_2_3')">-</span>
+3) Recollection / Mindfulness (skt.:smrti; tib.:dran pa)
+<ul id="fold1_6_2_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is the ability of the mind to return to the object.</span>
+<p><span style="color: #0066ff;">The continuous application of mindfulness acts as the basis for concentration and is also the basis for memory.</span>
+</li>
+</ul><p><span id="show1_6_2_4" class="foldclosed" onClick="show_folder('1_6_2_4')" style="POSITION: absolute">+</span> <span id="hide1_6_2_4" class="foldopened" onClick="hide_folder('1_6_2_4')">-</span>
+4) Concentration (skt.:sam&#257;dhi; tib.:ting nge &#8216;dzin)
+<ul id="fold1_6_2_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">Concentration in this context is the ability of the mind to remain on the object.</span>
+
+</li>
+
+</ul><p><span id="show1_6_2_5" class="foldclosed" onClick="show_folder('1_6_2_5')" style="POSITION: absolute">+</span> <span id="hide1_6_2_5" class="foldopened" onClick="hide_folder('1_6_2_5')">-</span>
+5) Wisdom / Intelligence (skt.:prajn&#257;; tib.:shes rab)
+<ul id="fold1_6_2_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is the ability of the mind to examine an object and determine its value, by seeing that object has certain characteristics that make it attractive, repulsive or neither.</span>
+</li>
+</ul></li>
+</ul><p><span id="show1_6_3" class="foldclosed" onClick="show_folder('1_6_3')" style="POSITION: absolute">+</span> <span id="hide1_6_3" class="foldopened" onClick="hide_folder('1_6_3')">-</span>
+A6.3) Eleven Virtuous Mental Factors (skt.:kushala; tib.:dge ba)
+<ul id="fold1_6_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_6_3_1" class="foldclosed" onClick="show_folder('1_6_3_1')" style="POSITION: absolute">+</span> <span id="hide1_6_3_1" class="foldopened" onClick="hide_folder('1_6_3_1')">-</span>
+1) Faith (skt.:shraddh&#257;; tib.:dad pa)
+<ul id="fold1_6_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It is a mental factor of finding joy which is freed of root and secondary afflictions.</span>
+
+</li>
+<li><span id="show1_6_3_1_1" class="foldclosed" onClick="show_folder('1_6_3_1_1')" style="POSITION: absolute">+</span> <span id="hide1_6_3_1_1" class="foldopened" onClick="hide_folder('1_6_3_1_1')">-</span>
+<span style="color: #0066ff;">This mental factor is the main entrance to all virtues. It is of three types:</span>
+<ul id="fold1_6_3_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a. Faith of admiration</span>
+
+</li>
+<li><span style="color: #0066ff;">b. Faith of aspiration</span>
+
+</li>
+<li><span style="color: #0066ff;">c. Faith of conviction</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_2" class="foldclosed" onClick="show_folder('1_6_3_2')" style="POSITION: absolute">+</span> <span id="hide1_6_3_2" class="foldopened" onClick="hide_folder('1_6_3_2')">-</span>
+2) Sense of shame out of self-respect (skt.:hri; tib.:ngo tsha shes pa)
+<ul id="fold1_6_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a mental factor that helps the individual to refrain from negativities due to respect for oneself.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_3_3" class="foldclosed" onClick="show_folder('1_6_3_3')" style="POSITION: absolute">+</span> <span id="hide1_6_3_3" class="foldopened" onClick="hide_folder('1_6_3_3')">-</span>
+3) Sense of shame out of respect for others (skt.:apatr&#257;pya; tib.:khrel yod pa)
+<ul id="fold1_6_3_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor helps one to refrain from negativities due to respect for others.</span>
+<p><span style="color: #0066ff;">The two mental factors &#8211;&nbsp;sense of shame out of self-respect and sense of shame out of respect for others &#8211;&nbsp;serve as basis for unspoiled moral discipline.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_3_4" class="foldclosed" onClick="show_folder('1_6_3_4')" style="POSITION: absolute">+</span> <span id="hide1_6_3_4" class="foldopened" onClick="hide_folder('1_6_3_4')">-</span>
+4) Non-attachment (skt.:alobha; tib.:chagpa med pa)
+<ul id="fold1_6_3_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It is a mental factor that is free of attachment to cyclic existence or mundane objects.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_5" class="foldclosed" onClick="show_folder('1_6_3_5')" style="POSITION: absolute">+</span> <span id="hide1_6_3_5" class="foldopened" onClick="hide_folder('1_6_3_5')">-</span>
+5) Non-aversion (skt.:advesha; tib.:zhe sdang med pa)
+<ul id="fold1_6_3_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">It is a mental factor which is free of animosity to three objects: 
+<br>
+1. perpetrators 
+<br>
+2. suffering 
+<br>
+3. cause of suffering such as poison, thorn and so forth</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_3_6" class="foldclosed" onClick="show_folder('1_6_3_6')" style="POSITION: absolute">+</span> <span id="hide1_6_3_6" class="foldopened" onClick="hide_folder('1_6_3_6')">-</span>
+6) Non-ignorance (skt.:amoha; tib.:gti mug med pa)
+<ul id="fold1_6_3_6" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It is a mental factor that is free from confusions.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_7" class="foldclosed" onClick="show_folder('1_6_3_7')" style="POSITION: absolute">+</span> <span id="hide1_6_3_7" class="foldopened" onClick="hide_folder('1_6_3_7')">-</span>
+7) Enthusiasm / Perseverance / Joyous effort (skt.:virya; tib.:brtson &#8216;grus)
+<ul id="fold1_6_3_7" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It is a mental factor that finds joy in virtue.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_8" class="foldclosed" onClick="show_folder('1_6_3_8')" style="POSITION: absolute">+</span> <span id="hide1_6_3_8" class="foldopened" onClick="hide_folder('1_6_3_8')">-</span>
+8) Pliancy / Suppleness (skt.:prasrabdhi; tib.:shin tu sbyangs pa)
+<ul id="fold1_6_3_8" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor is characterized by the quality of serviceability of the mind on a virtuous object. It enables the mind to engage in positive acts as wished, such as meditation.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_3_9" class="foldclosed" onClick="show_folder('1_6_3_9')" style="POSITION: absolute">+</span> <span id="hide1_6_3_9" class="foldopened" onClick="hide_folder('1_6_3_9')">-</span>
+9) Conscientiousness (skt.:apram&#257;da; tib.:bag yod pa)
+<ul id="fold1_6_3_9" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">This mental factor helps the individual to refrain from negativities and engage in virtues.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_10" class="foldclosed" onClick="show_folder('1_6_3_10')" style="POSITION: absolute">+</span> <span id="hide1_6_3_10" class="foldopened" onClick="hide_folder('1_6_3_10')">-</span>
+10) Equanimity (skt.:upeksh&#257;; tib.:btang snyoms)
+<ul id="fold1_6_3_10" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">Equanimity here refers to a stable mind, free of mental dullness or excitement.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_3_11" class="foldclosed" onClick="show_folder('1_6_3_11')" style="POSITION: absolute">+</span> <span id="hide1_6_3_11" class="foldopened" onClick="hide_folder('1_6_3_11')">-</span>
+11) Harmlessness (skt.:ahims&#257;; tib.:rnam par mi &#8216;tshe ba)
+<ul id="fold1_6_3_11" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor enables the mind to refrain from physical, verbal and mental harmful actions. It is of the nature of compassion.</span>
+</li>
+</ul>
+</li>
+
+</ul><p><span id="show1_6_4" class="foldclosed" onClick="show_folder('1_6_4')" style="POSITION: absolute">+</span> <span id="hide1_6_4" class="foldopened" onClick="hide_folder('1_6_4')">-</span>
+A6.4) Six Root Afflictions (skt.:mulaklesha; tib.:rtsa nyon)
+<ul id="fold1_6_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">Affliction or delusion is defined as any mental factor the presence of which disturbs the mind.</span>
+
+</li>
+<li><span id="show1_6_4_1" class="foldclosed" onClick="show_folder('1_6_4_1')" style="POSITION: absolute">+</span> <span id="hide1_6_4_1" class="foldopened" onClick="hide_folder('1_6_4_1')">-</span>
+1) Attachment / Desire (skt.:r&#257;ga; tib.:&#8216;dod chags)
+<ul id="fold1_6_4_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Attachment exaggerates the positive qualities of the object and moves the mind towards that object.</span>
+<p><span style="color: #0066ff;">Attachment to aggregates in cyclic existence causes rebirth &amp; incessant suffering in samsara.</span>
+<p><span style="color: #0066ff;">Note: Bear in mind that the words attachment and desire have ambiguity in their usage. Some understand these two words as negative whereas others interpret them to have both positive and negative connotation. For example, desire for Buddhahood or Enlightenment is virtuous and positive, whereas desiring to harm others is non-virtuous and negative, thus qualifying afflictive desire as a part of the six root afflictions.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_4_2" class="foldclosed" onClick="show_folder('1_6_4_2')" style="POSITION: absolute">+</span> <span id="hide1_6_4_2" class="foldopened" onClick="hide_folder('1_6_4_2')">-</span>
+2) Anger / Aversion (skt.:pratigha; tib.:khong khro)
+<ul id="fold1_6_4_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">Anger exaggerates the negative qualities of the object and moves the mind away from that object. It can lead to harming others.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_4_3" class="foldclosed" onClick="show_folder('1_6_4_3')" style="POSITION: absolute">+</span> <span id="hide1_6_4_3" class="foldopened" onClick="hide_folder('1_6_4_3')">-</span>
+3) Pride (skt.:m&#257;na tib.:nga rgyal)
+<ul id="fold1_6_4_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is an inflated sense of superiority which is supported by the worldly view of perishable collection towards the self and mine.</span>
+<p><span style="color: #0066ff;">This includes disrespect of others. It is of seven kinds as indicated in Abhidharmako&#351;ha: pride, pride of superiority, extreme pride, pride of ego, empty pride, pride of inferiority, and pride of wrong view.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_4_4" class="foldclosed" onClick="show_folder('1_6_4_4')" style="POSITION: absolute">+</span> <span id="hide1_6_4_4" class="foldopened" onClick="hide_folder('1_6_4_4')">-</span>
+4) Ignorance (skt.:avidhy&#257;; tib.:ma rig pa)
+<ul id="fold1_6_4_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor is characterized by mere absence of knowledge according to Arya Asanga and distortion of the reality according to Acharya Vasubandhu.</span>
+<p><span style="color: #0066ff;">This includes not knowing karma, meaning and practice pertaining to Three Jewels. This can lead to closed-mindedness. -</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_4_5" class="foldclosed" onClick="show_folder('1_6_4_5')" style="POSITION: absolute">+</span> <span id="hide1_6_4_5" class="foldopened" onClick="hide_folder('1_6_4_5')">-</span>
+5) Afflictive view (skt.:drshti; tib.:lta ba nyon mongs can)
+<ul id="fold1_6_4_5" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_6_4_5_1" class="foldclosed" onClick="show_folder('1_6_4_5_1')" style="POSITION: absolute">+</span> <span id="hide1_6_4_5_1" class="foldopened" onClick="hide_folder('1_6_4_5_1')">-</span>
+<span style="color: #0066ff;">Afflictive view is of five kinds:</span>
+<ul id="fold1_6_4_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">a) View of perishable collection (skt.:satkayadrsti; tib.:&#8216;jig-lta)</span>
+<p><span style="color: #0066ff;">b) View of the extremes (skt.:antagrahadrsti; tib.:mthar-lta)</span>
+<p><span style="color: #0066ff;">c) Distorted view (skt.:drstiparamarsa; tib.:log-lta)</span>
+<p><span style="color: #0066ff;">d) View of Supremacy of view (skt.:mithyadrsti; tib.:lta-ba- mchog-&#8216;dzin)</span>
+<p><span style="color: #0066ff;">e) View of Supremacy of morality and conduct(skt.:silavrataparamarsadrsti; tib.:tsul-khrims-brtul-zhugs- mchog-&#8216;dzin)</span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_4_6" class="foldclosed" onClick="show_folder('1_6_4_6')" style="POSITION: absolute">+</span> <span id="hide1_6_4_6" class="foldopened" onClick="hide_folder('1_6_4_6')">-</span>
+6) Afflictive doubt (skt.:vichikits&#257;; tib.:the tshom)
+<ul id="fold1_6_4_6" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor is characterized by being in two minds about reality, the Triple Gem and so forth.</span>
+<p><span style="color: #0066ff;">It leads one to engage in negativities. Doubt with respect to neutral things is not classified as afflictive doubt.</span>
+</li>
+</ul>
+</li>
+
+</ul><p><span id="show1_6_5" class="foldclosed" onClick="show_folder('1_6_5')" style="POSITION: absolute">+</span> <span id="hide1_6_5" class="foldopened" onClick="hide_folder('1_6_5')">-</span>
+A6.5) Twenty Secondary Afflictions (skt.:upaklesha; tib.:nye nyon)
+<ul id="fold1_6_5" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_6_5_1" class="foldclosed" onClick="show_folder('1_6_5_1')" style="POSITION: absolute">+</span> <span id="hide1_6_5_1" class="foldopened" onClick="hide_folder('1_6_5_1')">-</span>
+1) Belligerence (skt.:krodha; tib.:khro ba)
+<ul id="fold1_6_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a malicious state of mind that wishes to cause immediate harm to others due to increased anger.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_2" class="foldclosed" onClick="show_folder('1_6_5_2')" style="POSITION: absolute">+</span> <span id="hide1_6_5_2" class="foldopened" onClick="hide_folder('1_6_5_2')">-</span>
+2) Resentment (skt.:upan&#257;ha; tib.:&#8216;khon &#8216;dzin)
+<ul id="fold1_6_5_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It causes one not to forget harm done by a person and seeks to return harm done. It is closer to anger in nature.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_3" class="foldclosed" onClick="show_folder('1_6_5_3')" style="POSITION: absolute">+</span> <span id="hide1_6_5_3" class="foldopened" onClick="hide_folder('1_6_5_3')">-</span>
+3) Concealment (skt.:mraksha; tib.:&#8216;chab pa)
+<ul id="fold1_6_5_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">Hiding one&#8217;s negative qualities when others with good intention refer to them. This causes regret.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_5_4" class="foldclosed" onClick="show_folder('1_6_5_4')" style="POSITION: absolute">+</span> <span id="hide1_6_5_4" class="foldopened" onClick="hide_folder('1_6_5_4')">-</span>
+4) Spite (skt.:prad&#257;sa; tib.:&#8216;tshig pa)
+<ul id="fold1_6_5_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is intention to utter harsh speech in reply to unpleasant words, when wrath and hatred become unbearable upon others with good intention point to his/her faults.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_5" class="foldclosed" onClick="show_folder('1_6_5_5')" style="POSITION: absolute">+</span> <span id="hide1_6_5_5" class="foldopened" onClick="hide_folder('1_6_5_5')">-</span>
+5) Envy / Jealousy (skt.:irshy&#257;; tib.:phrag dog)
+<ul id="fold1_6_5_5" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is an internal irritation caused by feeling of unease over others&#8217; success and so forth. This is caused by attachment to possessions, respect and so forth. This is responsible for the decline of one&#8217;s own good qualities.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_6" class="foldclosed" onClick="show_folder('1_6_5_6')" style="POSITION: absolute">+</span> <span id="hide1_6_5_6" class="foldopened" onClick="hide_folder('1_6_5_6')">-</span>
+6) Miserliness (skt.:m&#257;tsarya; tib.:ser sna)
+<ul id="fold1_6_5_6" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental state is characterized by intense clinging to possessions and their increase due to attachment.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_7" class="foldclosed" onClick="show_folder('1_6_5_7')" style="POSITION: absolute">+</span> <span id="hide1_6_5_7" class="foldopened" onClick="hide_folder('1_6_5_7')">-</span>
+7) Dishonesty / Deceit (skt.:m&#257;y&#257;; tib.:sgyu)
+<ul id="fold1_6_5_7" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a mental state which has the attribute of hiding one&#8217;s faults to deceive others due to excessive attachment to possessions, service and so forth. This is closer to attachment and ignorance in nature. This leads to wrong livelihood.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_8" class="foldclosed" onClick="show_folder('1_6_5_8')" style="POSITION: absolute">+</span> <span id="hide1_6_5_8" class="foldopened" onClick="hide_folder('1_6_5_8')">-</span>
+8) Pretension / Dissimulation (skt.:s&#257;thya; tib.:gyo)
+<ul id="fold1_6_5_8" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor superimposes non-existent qualities upon oneself to deceive others due to excessive attachment to possessions, service and so forth. This is closer to attachment and ignorance in nature.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_9" class="foldclosed" onClick="show_folder('1_6_5_9')" style="POSITION: absolute">+</span> <span id="hide1_6_5_9" class="foldopened" onClick="hide_folder('1_6_5_9')">-</span>
+9) Vanity / Haughtiness (skt.:mada; tib.:rgyags pa)
+<ul id="fold1_6_5_9" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor gives a false sense of confidence by seeing one&#8217;s good qualities such as fortune, power and so forth. This inhibits the growth of good qualities within oneself. This is closer to attachment in nature.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_10" class="foldclosed" onClick="show_folder('1_6_5_10')" style="POSITION: absolute">+</span> <span id="hide1_6_5_10" class="foldopened" onClick="hide_folder('1_6_5_10')">-</span>
+10) Harmfulness (skt.:vihims&#257;; tib.:rnam par &#8216;tshe ba)
+<ul id="fold1_6_5_10" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A mental factor which seeks to cause harm on others being devoid of compassion. This is closer to anger in nature.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_11" class="foldclosed" onClick="show_folder('1_6_5_11')" style="POSITION: absolute">+</span> <span id="hide1_6_5_11" class="foldopened" onClick="hide_folder('1_6_5_11')">-</span>
+11) Shamelessness (skt.:&#257;hrikya; tib.:ngo tsha med pa)
+<ul id="fold1_6_5_11" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a lack of consideration for oneself and consciously not avoiding evil. It supports all root and secondary afflictions.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_12" class="foldclosed" onClick="show_folder('1_6_5_12')" style="POSITION: absolute">+</span> <span id="hide1_6_5_12" class="foldopened" onClick="hide_folder('1_6_5_12')">-</span>
+12) Non-embarrassment (skt.:anapatr&#257;pya; tib.:khrel med pa)
+<ul id="fold1_6_5_12" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">It is a mental state which does not avoid evil by being inconsiderate of others.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_5_13" class="foldclosed" onClick="show_folder('1_6_5_13')" style="POSITION: absolute">+</span> <span id="hide1_6_5_13" class="foldopened" onClick="hide_folder('1_6_5_13')">-</span>
+13) Dullness / Lethargy (skt.:sty&#257;na; tib.:rmugs pa)
+<ul id="fold1_6_5_13" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This is the fogginess of mind which makes the mind heavy and lax. The coarse dullness is when the object is unclear whereas the subtle dullness has some degree of clarity but the vividness of the object is lacking.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_14" class="foldclosed" onClick="show_folder('1_6_5_14')" style="POSITION: absolute">+</span> <span id="hide1_6_5_14" class="foldopened" onClick="hide_folder('1_6_5_14')">-</span>
+14) Excitement (skt.:auddhatya; tib.:rgod pa)
+<ul id="fold1_6_5_14" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It distracts one towards desire objects and does not allow the mind to rest on something wholesome. It obstructs one from achieving single pointed concentration.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_15" class="foldclosed" onClick="show_folder('1_6_5_15')" style="POSITION: absolute">+</span> <span id="hide1_6_5_15" class="foldopened" onClick="hide_folder('1_6_5_15')">-</span>
+15) Faithlessness (skt.:&#257;shraddhya; tib.:ma dad pa)
+<ul id="fold1_6_5_15" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor is characterized by lacking belief in those objects which are the basis for virtues such as law of karma. This is closer to ignorance in nature. This is the basis for losing the root of virtues.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_16" class="foldclosed" onClick="show_folder('1_6_5_16')" style="POSITION: absolute">+</span> <span id="hide1_6_5_16" class="foldopened" onClick="hide_folder('1_6_5_16')">-</span>
+16) Laziness (skt.:kausidya; tib.:le lo)
+<ul id="fold1_6_5_16" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">It is a mental factor which does not find joy in virtues or feels low in engaging in virtues due to adherence to temporary happiness and pleasure.</span>
+<p><span style="color: #0066ff;">This is closer to ignorance in nature and undermines the power of enthusiasm. Laziness is the basis for degenerating the virtues already accumulated and destroys the basis for creating new virtues.</span>
+<p><span id="show1_6_5_16_1" class="foldclosed" onClick="show_folder('1_6_5_16_1')" style="POSITION: absolute">+</span> <span id="hide1_6_5_16_1" class="foldopened" onClick="hide_folder('1_6_5_16_1')">-</span>
+<span style="color: #0066ff;">Laziness is of three kinds:</span>
+<ul id="fold1_6_5_16_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Laziness of being attached to trivial purposes.</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Laziness of procrastination.</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Laziness of undermining one&#8217;s own potential.</span>
+
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_6_5_17" class="foldclosed" onClick="show_folder('1_6_5_17')" style="POSITION: absolute">+</span> <span id="hide1_6_5_17" class="foldopened" onClick="hide_folder('1_6_5_17')">-</span>
+17) Unconscientiousness (skt.:pram&#257;da; tib.:bag med pa)
+<ul id="fold1_6_5_17" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #ff3300;">This is a mental factor which acts in negativities unrestrained.</span>
+
+</li>
+<li><span style="color: #0066ff;">This serves as the basis to diminish virtues and proliferate negativities.</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_6_5_18" class="foldclosed" onClick="show_folder('1_6_5_18')" style="POSITION: absolute">+</span> <span id="hide1_6_5_18" class="foldopened" onClick="hide_folder('1_6_5_18')">-</span>
+18) Forgetfulness (skt.:mu shitasmrtit&#257;; tib.:brjed nges pa)
+<ul id="fold1_6_5_18" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor causes one to not remember objects of virtues and induces distraction to afflictive objects.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_19" class="foldclosed" onClick="show_folder('1_6_5_19')" style="POSITION: absolute">+</span> <span id="hide1_6_5_19" class="foldopened" onClick="hide_folder('1_6_5_19')">-</span>
+19)Non-introspection (skt.:asamprajanya; tib.:shes bzhin ma yin pa)
+<ul id="fold1_6_5_19" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">This mental factor is a distorted intelligence that rashly engages in the actions through the three doors either due to lack of analysis or faulty analysis.</span>
+<p><span style="color: #0066ff;">This inhibits wisdom.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_6_5_20" class="foldclosed" onClick="show_folder('1_6_5_20')" style="POSITION: absolute">+</span> <span id="hide1_6_5_20" class="foldopened" onClick="hide_folder('1_6_5_20')">-</span>
+20)Distraction / Mental wandering / Discursiveness (skt.:vikshepa; tib.:rnam par gyeng ba)
+<ul id="fold1_6_5_20" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #ff3300;">A mental factor which functions to be scattered to varied objects due to lack of potential to focus on virtuous objects.</span>
+<p><span style="color: #0066ff;">This diminishes the power of concentration.</span>
+</li>
+</ul>
+</li>
+
+</ul><p><span id="show1_6_6" class="foldclosed" onClick="show_folder('1_6_6')" style="POSITION: absolute">+</span> <span id="hide1_6_6" class="foldopened" onClick="hide_folder('1_6_6')">-</span>
+A6.6) Four Variable Mental Factors (skt.:anyath&#257;bh&#257;va; tib.:gzhan &#8216;&nbsp;gyur)
+<ul id="fold1_6_6" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">Mental factors in this category are called variable mental factors because they can be changed into virtuous, non-virtuous, or neutral types due to either motivation or other accompanying mental factors.</span>
+<p><span id="show1_6_6_1" class="foldclosed" onClick="show_folder('1_6_6_1')" style="POSITION: absolute">+</span> <span id="hide1_6_6_1" class="foldopened" onClick="hide_folder('1_6_6_1')">-</span>
+1) Sleep (skt.:middha; tib.:gnyid)
+<ul id="fold1_6_6_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">It is the mind that usually operates when our gross sensory consciousnesses cease their functions.</span>
+<p><span style="color: #0066ff;">According to the Abhidharma texts, sleep is seen as virtuous, non-virtuous or neutral depending on the immediately preceding consciousness &#8211;&nbsp;the mind just prior to sleep.</span>
+</li>
+</ul><p><span id="show1_6_6_2" class="foldclosed" onClick="show_folder('1_6_6_2')" style="POSITION: absolute">+</span> <span id="hide1_6_6_2" class="foldopened" onClick="hide_folder('1_6_6_2')">-</span>
+2) Regret / contrition (skt.:kaukritya; tib.:&#8216;gyod pa)
+<ul id="fold1_6_6_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">Regret can be either virtuous or non-virtuous depending on the object of regret. It is virtuous when one regrets over the negative things done in the past. In contrast, regretting a wholesome deed is non-virtuous.</span>
+</li>
+</ul><p><span id="show1_6_6_3" class="foldclosed" onClick="show_folder('1_6_6_3')" style="POSITION: absolute">+</span> <span id="hide1_6_6_3" class="foldopened" onClick="hide_folder('1_6_6_3')">-</span>
+3) General Analysis (skt.:vitarka; tib.:rtog pa)
+<ul id="fold1_6_6_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">It is the mind that explores an object &#8211;&nbsp;the things and events that make up our daily lives &#8211;&nbsp;but not in a deep analytical way. It is virtuous or non-virtuous depending on the motivation.</span>
+</li>
+</ul><p><span id="show1_6_6_4" class="foldclosed" onClick="show_folder('1_6_6_4')" style="POSITION: absolute">+</span> <span id="hide1_6_6_4" class="foldopened" onClick="hide_folder('1_6_6_4')">-</span>
+4) Subtle Analysis (skt.:vich&#257;ra; tib.:dpyod pa)
+<ul id="fold1_6_6_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">This mental factor explores the object in a detailed way. Like general examination the polarity of the mind of subtle analysis is determined by the object it is exploring. If the object is wholesome, the mind is wholesome and vice versa.</span>
+</li>
+</ul></li>
+</ul></li>
+</ul>
+</li>
+<li><span id="show1_7" class="foldclosed" onClick="show_folder('1_7')" style="POSITION: absolute">+</span> <span id="hide1_7" class="foldopened" onClick="hide_folder('1_7')">-</span>
+A7. Other Important Topics under Buddhist Psychology
+<ul id="fold1_7" style="POSITION: relative; VISIBILITY: visible;"><li><p>1) Role of psychology and philosophy in our life
+<p><span id="show1_7_1" class="foldclosed" onClick="show_folder('1_7_1')" style="POSITION: absolute">+</span> <span id="hide1_7_1" class="foldopened" onClick="hide_folder('1_7_1')">-</span>
+2) Five aggregates with emphasis on feeling and discrimination and how these two determine all actions and quality of life
+<ul id="fold1_7_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Form (skt.:r&#363;pa; tib.:gzugs)</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Feeling (skt.:vedan&#257; ; tib.:tsor ba)</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Discrimination (skt.: sa&#7747;j&#241;&#257; ; tib.:&#8216;du shes)</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Compositional Factors (skt:.:sa&#7747;sk&#257;ra ; tib.:&#8216;du byed)</span>
+
+</li>
+<li><span style="color: #0066ff;">e) Consciousness (skt:.:vij&#241;&#257;na ; tib.:rnam par shes pa)</span>
+
+</li>
+
+</ul><p>3) View and impulse oriented minds (from Abhidharmako&#351;ha)
+<p>4) Cognitive and affective positive mental states
+<p>5) Two kinds of motivation &#8211;&nbsp;initial and concurrent
+<p>6) Factors that determine the power of karma &#8211;&nbsp;basis, intention, act, and end.
+<p><span id="show1_7_2" class="foldclosed" onClick="show_folder('1_7_2')" style="POSITION: absolute">+</span> <span id="hide1_7_2" class="foldopened" onClick="hide_folder('1_7_2')">-</span>
+7) How karma operates and various classifications of karma
+<ul id="fold1_7_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Definite and uncertain karma.</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Evidently experiencing karmas; to be experienced in the next life; and still after.</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Propelling/ projecting karma and completing karma.</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Karmic result concomitant with its causal karma in terms of experience and in terms of action.</span>
+
+</li>
+
+</ul><p><span id="show1_7_3" class="foldclosed" onClick="show_folder('1_7_3')" style="POSITION: absolute">+</span> <span id="hide1_7_3" class="foldopened" onClick="hide_folder('1_7_3')">-</span>
+8) Process of arising afflictions and virtues
+<ul id="fold1_7_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span id="show1_7_3_1" class="foldclosed" onClick="show_folder('1_7_3_1')" style="POSITION: absolute">+</span> <span id="hide1_7_3_1" class="foldopened" onClick="hide_folder('1_7_3_1')">-</span>
+<span style="color: #0066ff;">a) From Abhidharmako&#351;ha ( Chapter 5 Stanza 34 )</span>
+<ul id="fold1_7_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">Through i) afflictions not having been abandoned,
+<br>
+ii) an object abiding nearby and
+<br>
+iii) improper mental attention,
+<br>
+the causes of the afflictions are complete.</span>
+</li>
+</ul><p><span id="show1_7_3_2" class="foldclosed" onClick="show_folder('1_7_3_2')" style="POSITION: absolute">+</span> <span id="hide1_7_3_2" class="foldopened" onClick="hide_folder('1_7_3_2')">-</span>
+<span style="color: #0066ff;">b) From M&#363;lam&#257;dhayamakak&#257;rik&#257; (Fundamental Wisdom of the Middle Way) Chapter 18 &#8220;Examination Of Self And Phenomenon&#8221;, Stanza 5</span>
+<ul id="fold1_7_3_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">Through ceasing karma and afflictions,
+<br>
+nirvana is achieved.
+<br>
+Karma and afflictions arise from (distorted) conceptions.
+<br>
+These arise from elaborations (of grasping at true existence).
+<br>
+Elaborations cease by (or into) emptiness.</span>
+</li>
+</ul><p><span id="show1_7_3_3" class="foldclosed" onClick="show_folder('1_7_3_3')" style="POSITION: absolute">+</span> <span id="hide1_7_3_3" class="foldopened" onClick="hide_folder('1_7_3_3')">-</span>
+<span style="color: #0066ff;">c) From Pramanavartika, Chapter 2, Stanza 219</span>
+<ul id="fold1_7_3_3" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #339900;">Seeing the &#8216;self,&#8217; will lead to seeing &#8216;others.&#8217;
+<br>
+Bifurcating self and others leads to attachment and aversion.
+<br>
+Associated with these [attachment and aversion],
+<br>
+All faults [such as killing, fears and so forth] ensue.</span>
+</li>
+</ul><p><span id="show1_7_3_4" class="foldclosed" onClick="show_folder('1_7_3_4')" style="POSITION: absolute">+</span> <span id="hide1_7_3_4" class="foldopened" onClick="hide_folder('1_7_3_4')">-</span>
+<span style="color: #0066ff;">d) From Lamrim Chenmo, The Great Treatise On The Stages Of The Path To Enlightenment Part 1 Pg 301. The causes of the afflictions are sixfold as presented in the Bodhisattva Levels:</span>
+<ul id="fold1_7_3_4" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">i. Basis &#8211;&nbsp;imprints : Basis refers to the latent proclivity for afflictions.</span>
+<p><span style="color: #0066ff;">ii. Object : Object refers to the appearance of objects conducive to the arising of an affliction.</span>
+<p><span style="color: #0066ff;">iii. Indulgence &#8211;&nbsp;external influence / Social Context : Social context refers to the influence of bad friends and foolish people.</span>
+<p><span style="color: #0066ff;">iv. Wrong guidance : Explanation refers to listening to wrong teachings.</span>
+<p><span style="color: #0066ff;">v. Habit : Habituation refers to the process of becoming accustomed to past afflictions.</span>
+<p><span style="color: #0066ff;">vi. Inappropriate attention : Attention refers to incorrect attention that projects "pleasantness" onto what has an unpleasant character, conceives an impermanent thing to be permanent, and the like [the four erroneous conceptions that mistakenly consider things that are actually impermanent, painful, impure and lacking a self to be permanent, pleasant, pure and possessed of a self]</span>
+</li>
+</ul></li>
+</ul><p><span id="show1_7_4" class="foldclosed" onClick="show_folder('1_7_4')" style="POSITION: absolute">+</span> <span id="hide1_7_4" class="foldopened" onClick="hide_folder('1_7_4')">-</span>
+9) Eight mundane concerns ( surge of emotions )
+<ul id="fold1_7_4" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_7_4_1" class="foldclosed" onClick="show_folder('1_7_4_1')" style="POSITION: absolute">+</span> <span id="hide1_7_4_1" class="foldopened" onClick="hide_folder('1_7_4_1')">-</span>
+<span style="color: #0066ff;">Excitement or loss of spirit triggered by the following eight situations</span>
+<ul id="fold1_7_4_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Gain or Loss of Material Things.</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Praise or Defamation.</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Pleasant or Unpleasant Words.</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Happiness or Suffering.</span>
+
+</li>
+
+</ul>
+</li>
+<li>Five ( Afflictive ) Views (tib.:lta ba nyon mongs can)
+
+</li>
+
+</ul><p>10) Self grasping mind and self centered attitude.
+<p><span id="show1_7_5" class="foldclosed" onClick="show_folder('1_7_5')" style="POSITION: absolute">+</span> <span id="hide1_7_5" class="foldopened" onClick="hide_folder('1_7_5')">-</span>
+11) The Five Views and Five Non-Views
+<ul id="fold1_7_5" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_7_5_1" class="foldclosed" onClick="show_folder('1_7_5_1')" style="POSITION: absolute">+</span> <span id="hide1_7_5_1" class="foldopened" onClick="hide_folder('1_7_5_1')">-</span>
+<span style="color: #0066ff;">Five ( Afflictive ) Views (tib.:lta ba nyon mongs can)</span>
+<ul id="fold1_7_5_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">a) View of perishable collection (skt.:satkayadrsti; tib.:&#8216;jig-lta)</span>
+<p><span style="color: #0066ff;">b) View of the extremes (skt.:antagrahadrsti; tib.:mthar-lta)</span>
+<p><span style="color: #0066ff;">c) Distorted view (skt.:drstiparamarsa; tib.:log-lta)</span>
+<p><span style="color: #0066ff;">d) View of Supremacy of view (skt.:mithyadrsti; tib.:lta-ba- mchog-&#8216;dzin)</span>
+<p><span style="color: #0066ff;">e) View of Supremacy of morality and conduct (skt.:silavrataparamarsadrsti;tib.:tsul-khrims-brtul-zhugs-mchog-&#8216;dzin)</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_7_5_2" class="foldclosed" onClick="show_folder('1_7_5_2')" style="POSITION: absolute">+</span> <span id="hide1_7_5_2" class="foldopened" onClick="hide_folder('1_7_5_2')">-</span>
+<span style="color: #0066ff;">Five Non-Views</span>
+<ul id="fold1_7_5_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Attachment / Desire (skt.:r&#257;ga; tib.:&#8216;dod chags)</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Anger / Aversion (skt.:pratigha; tib.:khong khro)</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Pride (skt.:m&#257;na tib.:nga rgyal)</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Ignorance (skt.:avidhy&#257;; tib.:ma rig pa)</span>
+
+</li>
+<li><span style="color: #0066ff;">e) Afflictive doubt (skt.:vichikits&#257;; tib.:the tshom)</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul><p><span id="show1_7_6" class="foldclosed" onClick="show_folder('1_7_6')" style="POSITION: absolute">+</span> <span id="hide1_7_6" class="foldopened" onClick="hide_folder('1_7_6')">-</span>
+12) The Four Wrong Views
+<ul id="fold1_7_6" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Seeing impermanent phenomenon as permanent.</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Seeing miseries as happiness.</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Seeing impure things as pure.</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Seeing selfless nature as nature of self-hood.</span>
+
+</li>
+
+</ul><p><span id="show1_7_7" class="foldclosed" onClick="show_folder('1_7_7')" style="POSITION: absolute">+</span> <span id="hide1_7_7" class="foldopened" onClick="hide_folder('1_7_7')">-</span>
+13) The Four Mindfulnesses (Satipatana practices)
+<ul id="fold1_7_7" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Mindfulness of body (as unclean and foul).</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Mindfulness of feeling (as of the nature of suffering).</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Mindfulness of mind (as momentary).</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Mindfulness of phenomena (as empty of selfhood).</span>
+
+</li>
+
+</ul><p><span id="show1_7_8" class="foldclosed" onClick="show_folder('1_7_8')" style="POSITION: absolute">+</span> <span id="hide1_7_8" class="foldopened" onClick="hide_folder('1_7_8')">-</span>
+14) The Three Bondages
+<ul id="fold1_7_8" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_7_8_1" class="foldclosed" onClick="show_folder('1_7_8_1')" style="POSITION: absolute">+</span> <span id="hide1_7_8_1" class="foldopened" onClick="hide_folder('1_7_8_1')">-</span>
+<span style="color: #0066ff;">as taught in Abhidharmakosha.</span>
+<ul id="fold1_7_8_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">view of perishable collection</span>
+
+</li>
+<li><span style="color: #0066ff;">doubt</span>
+
+</li>
+<li><span style="color: #0066ff;">view of supremacy of conduct</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul><p><span id="show1_7_9" class="foldclosed" onClick="show_folder('1_7_9')" style="POSITION: absolute">+</span> <span id="hide1_7_9" class="foldopened" onClick="hide_folder('1_7_9')">-</span>
+15) Three wisdoms
+<ul id="fold1_7_9" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Wisdom derived through learning.</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Wisdom derived through reflection.</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Wisdom derived through meditation.</span>
+
+</li>
+
+</ul><p><span id="show1_7_10" class="foldclosed" onClick="show_folder('1_7_10')" style="POSITION: absolute">+</span> <span id="hide1_7_10" class="foldopened" onClick="hide_folder('1_7_10')">-</span>
+16) Four kinds of wisdom
+<ul id="fold1_7_10" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">expansive</span>
+
+</li>
+<li><span style="color: #0066ff;">clarity</span>
+
+</li>
+<li><span style="color: #0066ff;">profound</span>
+
+</li>
+<li><span style="color: #0066ff;">swift</span>
+
+</li>
+
+</ul><p><span id="show1_7_11" class="foldclosed" onClick="show_folder('1_7_11')" style="POSITION: absolute">+</span> <span id="hide1_7_11" class="foldopened" onClick="hide_folder('1_7_11')">-</span>
+17) Four Immeasurables (skt.:chatur brahmavihara; tib.:tsaymay shi)
+<ul id="fold1_7_11" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">a) Immeasurable Loving Kindness (skt.:maitr&#238;; tib.:jampa tsaymay)</span>
+
+</li>
+<li><span style="color: #0066ff;">b) Immeasurable Compassion (skt.:karuna; tib.:nyingjey tsaymay)</span>
+
+</li>
+<li><span style="color: #0066ff;">c) Immeasurable Joy (skt.:mudita; tib.:gawa tsaymay)</span>
+
+</li>
+<li><span style="color: #0066ff;">d) Immeasurable Equanimity (skt.:upeksha; tib.:tang-nyom tsaymay)</span>
+
+</li>
+
+</ul><p>18) Four form concentration and four formless realm minds.
+<p><span id="show1_7_12" class="foldclosed" onClick="show_folder('1_7_12')" style="POSITION: absolute">+</span> <span id="hide1_7_12" class="foldopened" onClick="hide_folder('1_7_12')">-</span>
+19) Ten perfections
+<ul id="fold1_7_12" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">i. Generosity.</span>
+
+</li>
+<li><span style="color: #0066ff;">ii. Ethics / Morality.</span>
+
+</li>
+<li><span style="color: #0066ff;">iii. Patience.</span>
+
+</li>
+<li><span style="color: #0066ff;">iv. Enthusiasm.</span>
+
+</li>
+<li><span style="color: #0066ff;">v. Meditative Concentration.</span>
+
+</li>
+<li><span style="color: #0066ff;">vi. Wisdom of ultimate reality.</span>
+
+</li>
+<li><span style="color: #0066ff;">vii. Skillfulness.</span>
+
+</li>
+<li><span style="color: #0066ff;">viii. Aspirational Prayers.</span>
+
+</li>
+<li><span style="color: #0066ff;">ix. Power.</span>
+
+</li>
+<li><span style="color: #0066ff;">x. Discriminatory Wisdom of conventional reality.</span>
+
+</li>
+
+</ul><p>20) Subtle and gross minds
+<p>21) Subjective and Objective Clear Light.
+<p>22) Dealing with anger (Chapter Six of Bodhisattvacharyavatara, A Guide To The Bodhisattva's Way Of Life ).
+<p>23) Building positive psychology &#8211;&nbsp;the two Bodhicitta meditation methods.
+<p>24) Meditation on the nature of mind (awareness of awareness meditation).
+</li>
+</ul>
+</li>
+<li><span id="show1_8" class="foldclosed" onClick="show_folder('1_8')" style="POSITION: absolute">+</span> <span id="hide1_8" class="foldopened" onClick="hide_folder('1_8')">-</span>
+A8. Fifty Two Mental Factors in Pali Sources
+<ul id="fold1_8" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_8_1" class="foldclosed" onClick="show_folder('1_8_1')" style="POSITION: absolute">+</span> <span id="hide1_8_1" class="foldopened" onClick="hide_folder('1_8_1')">-</span>
+<span style="color: #0066ff;">Mental factors as enumerated in Pali tradition are classified in four groups:</span>
+<ul id="fold1_8_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_8_1_1" class="foldclosed" onClick="show_folder('1_8_1_1')" style="POSITION: absolute">+</span> <span id="hide1_8_1_1" class="foldopened" onClick="hide_folder('1_8_1_1')">-</span>
+a) Seven Universal Mental Factors
+<ul id="fold1_8_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">1. Phassa Contact</span>
+
+</li>
+<li><span style="color: #0066ff;">2. Vedan&#257; Feeling</span>
+
+</li>
+<li><span style="color: #0066ff;">3. Sa&#241;&#241;&#257; Perception</span>
+
+</li>
+<li><span style="color: #0066ff;">4. Cetan&#257; Intention</span>
+
+</li>
+<li><span style="color: #0066ff;">5. Ekaggat&#257; One-pointedness</span>
+
+</li>
+<li><span style="color: #0066ff;">6. J&#299;vitindriya Life faculty</span>
+
+</li>
+<li><span style="color: #0066ff;">7. Manasik&#257;ra Attention</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_8_1_2" class="foldclosed" onClick="show_folder('1_8_1_2')" style="POSITION: absolute">+</span> <span id="hide1_8_1_2" class="foldopened" onClick="hide_folder('1_8_1_2')">-</span>
+b) Six Occasional Mental Factors
+<ul id="fold1_8_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">8. Vitakka Initial thought</span>
+
+</li>
+<li><span style="color: #0066ff;">9. Vic&#257;ra Sustained thought</span>
+
+</li>
+<li><span style="color: #0066ff;">10. Adhimokkha Determination</span>
+
+</li>
+<li><span style="color: #0066ff;">11. V&#299;riya Energy</span>
+
+</li>
+<li><span style="color: #0066ff;">12. P&#299;ti Rapture</span>
+
+</li>
+<li><span style="color: #0066ff;">13. Chanda Wish</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_8_1_3" class="foldclosed" onClick="show_folder('1_8_1_3')" style="POSITION: absolute">+</span> <span id="hide1_8_1_3" class="foldopened" onClick="hide_folder('1_8_1_3')">-</span>
+c) Fourteen Unwholesome Mental Factors
+<ul id="fold1_8_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">14. Moha Delusion</span>
+
+</li>
+<li><span style="color: #0066ff;">15. Ahirika Shamelessness</span>
+
+</li>
+<li><span style="color: #0066ff;">16. Anottappa Moral fearlessness</span>
+
+</li>
+<li><span style="color: #0066ff;">17. Uddhacca Restlessness</span>
+
+</li>
+<li><span style="color: #0066ff;">18. Lobha Greed</span>
+
+</li>
+<li><span style="color: #0066ff;">19. Di&#7789;&#7789;hi Wrong view</span>
+
+</li>
+<li><span style="color: #0066ff;">20. M&#257;na Conceit</span>
+
+</li>
+<li><span style="color: #0066ff;">21. Dosa Hatred</span>
+
+</li>
+<li><span style="color: #0066ff;">22. Iss&#257; Envy</span>
+
+</li>
+<li><span style="color: #0066ff;">23. Macchariya Stinginess</span>
+
+</li>
+<li><span style="color: #0066ff;">24. Kukkucca Worry, remorse</span>
+
+</li>
+<li><span style="color: #0066ff;">25. Th&#299;na Sloth, laziness</span>
+
+</li>
+<li><span style="color: #0066ff;">26. Middha Torpor, tiredness</span>
+
+</li>
+<li><span style="color: #0066ff;">27. Vicikicch&#257; Skeptical doubt</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_8_1_4" class="foldclosed" onClick="show_folder('1_8_1_4')" style="POSITION: absolute">+</span> <span id="hide1_8_1_4" class="foldopened" onClick="hide_folder('1_8_1_4')">-</span>
+d) Twenty five Beautiful Mental Factors
+<ul id="fold1_8_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #0066ff;">28. Saddh&#257; Confidence</span>
+
+</li>
+<li><span style="color: #0066ff;">29. Sati Mindfulness</span>
+
+</li>
+<li><span style="color: #0066ff;">30. Hiri Moral shame</span>
+
+</li>
+<li><span style="color: #0066ff;">31. Ottappa Moral fear</span>
+
+</li>
+<li><span style="color: #0066ff;">32. Alobha Non-greed</span>
+
+</li>
+<li><span style="color: #0066ff;">33. Adosa Non-hatred</span>
+
+</li>
+<li><span style="color: #0066ff;">34. Tatramajjhattat&#257; Equanimity</span>
+
+</li>
+<li><span style="color: #0066ff;">35. K&#257;yapassaddhi Tranquility (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">36. Cittapassaddhi Tranquility (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">37. K&#257;yalahut&#257; Lightness (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">38. Cittalahut&#257; Lightness (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">39. K&#257;yamudut&#257; Pliancy (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">40. Cittamudut&#257; Pliancy (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">41. K&#257;yakamma&#241;&#241;at&#257; Adaptability (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">42. Cittakamma&#241;&#241;at&#257; Adaptability (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">43. K&#257;yap&#257;gu&#241;&#241;at&#257; Proficiency (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">44. Cittap&#257;gu&#241;&#241;at&#257; Proficiency (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">45. K&#257;yujjukat&#257; Rectitude (of mental factors)</span>
+
+</li>
+<li><span style="color: #0066ff;">46. Cittujjukat&#257; Rectitude (of consciousness)</span>
+
+</li>
+<li><span style="color: #0066ff;">47. Samm&#257; v&#257;c&#257; Right speech</span>
+
+</li>
+<li><span style="color: #0066ff;">48. Samm&#257; kammanta Right action</span>
+
+</li>
+<li><span style="color: #0066ff;">49. Samm&#257; &#257;j&#299;va Right livelihood</span>
+
+</li>
+<li><span style="color: #0066ff;">50. Karu&#7751;&#257; Compassion</span>
+
+</li>
+<li><span style="color: #0066ff;">51. Mudit&#257; Sympathetic joy</span>
+
+</li>
+<li><span style="color: #0066ff;">52. Pa&#241;&#241;indriya Wisdom (faculty)</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_9" class="foldclosed" onClick="show_folder('1_9')" style="POSITION: absolute">+</span> <span id="hide1_9" class="foldopened" onClick="hide_folder('1_9')">-</span>
+A9. Suggested readings For Buddhist Psychology
+<ul id="fold1_9" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #0066ff;">1. Mind in Tibetan Buddhism, Lati Rinpoche edited by Elizabeth Napper, Snow Lion Publications.</span>
+<p><span style="color: #0066ff;">2. Geshe Losang Gyatso: Rigs lam che ba blo rigs kyi rnam gzag n&#241;e mkho kun btus (Advanced principles of Tibetan logic and disputation), Pub. by Lochen Rinpoche, Delhi, 1985.</span>
+<p><span style="color: #0066ff;">3. Buddhist Psychology, Geshe Tashi Tsering The Foundation of Buddhist Thought, Vol. 3, Edited by Gordon McDougal, Wisdom Publication.</span>
+<p><span style="color: #0066ff;">4. Emotional Awareness: Overcoming the Obstacles to Psychological Balance and Compassion by His Holiness Dalai Lama and Professor Paul Ekman.</span>
+</li>
+</ul>
+</li>
+
+</ul><SCRIPT type="text/javascript">
+fold_document();
+</SCRIPT>
+</body>
+</html>
